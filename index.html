@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aesop | HOME</title>
+
+    <!-- font -->
+    <link rel="stylesheet" href="css/font/font.css">
+
+    <!-- css : reset, common -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+
+    <!-- css : header, index, footer -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- css : responsive -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- js -->
+    <script src="js/index.js"></script>
+
+    <style>
+        /* 숨김처리 후, 다른 파트 디자인 다 만들고 디자인 적용할 요소들 */
+        .deliveryModal {
+            display: none;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <header>
+        <div class="banner">
+            <button class="bannerBtn">
+                <p class="bannerTxt">전 구매 무료배송 및 선물포장과 단독 기프트 메시지 카드 혜택을 즐겨보세요.</p>
+                <i>
+                    <svg aria-labelledby="plus-:R15aqm:"
+                        class="Icon_base__ruWRL Icon_plus__b6Ex9 Icon_dark__YP_ta ShippingBanner_ShippingBanner-openModalIcon__bKm0K"
+                        data-testid="data-testid-Icon" focusable="false" height="22" role="img"
+                        style="height:22px;width:22px" tabindex="-1" viewBox="0 0 50 50" width="22">
+                        <title id="plus-:R15aqm:">plus</title>
+                        <g>
+                            <polygon
+                                points="26.2,15.2 23.8,15.2 23.8,23.9 15,23.9 15,26.4 23.8,26.4 23.8,35.1 26.2,35.1 26.2,26.4 35,26.4 35,23.9 26.2,23.9"
+                                class="Icon_plus__b6Ex9"></polygon>
+                        </g>
+                    </svg>
+                </i>
+            </button>
+            <aside class="deliveryModal">
+                <header>
+                    <h2>전 구매 무료배송</h2>
+                    <button class="closeBtn">
+                        <i>
+                            <svg aria-labelledby="close-:r9p:"
+                                class="Icon_base__ruWRL Icon_close___y9Tu Icon_dark__YP_ta"
+                                data-testid="data-testid-Icon" focusable="false" height="13" role="img" tabindex="-1"
+                                viewBox="0 0 50 50" width="13" style="height: 13px; width: 13px;">
+                                <title id="close-:r9p:">close</title>
+                                <g>
+                                    <polygon points="50,5 45,0 25,20 5,0 0,5 20,25 0,45 5,50 25,30 45,50 50,45 30,25"
+                                        class="Icon_close___y9Tu"></polygon>
+                                </g>
+                            </svg>
+                        </i>
+                    </button>
+                </header>
+
+                <div class="deliveryContent">
+                    <ul>
+                        <li>
+                            <h3>CJ 대한통운</h3>
+                            <p><span>전 제품</span><span>무료 배송</span></p>
+                            <p><span>전 지역</span><span>영업일 기준, 2-3일</span></p>
+                        </li>
+                        <li>
+                            <h3>군부대/사서함 배송 불가 안내</h3>
+                            <p>군부대 및 사서함으로 배송되는 주문의 경우, CJ대한통운을 통한 배송이 불가하여 별도 문자 안내와 함께 자동 주문 취소 처리될 예정입니다.</p>
+                        </li>
+                        <li>
+                            <h3>무료 선물 포장 서비스</h3>
+                            <p>주문하신 제품을 기프트 메시지와 함께 선물 포장해 드립니다. 기프트 메시지는 주문 시에 작성하실 수 있습니다.</p>
+                        </li>
+                        <li>
+                            <h3>샘플 & 코튼 백 증정</h3>
+                            <p>이솝 공식 온라인 몰은 무료 샘플과 코튼 백을 제공해 드립니다. 제공되는 코튼 백의 사이즈는 제품의 크기에 따라 다릅니다. 샘플 옵션은 결제 시 선택할 수
+                                있으며, 재고 소진 시 별도의 안내 없이 변경될 수 있습니다.</p>
+                        </li>
+                        <li>
+                            <h3>교환 및 반품</h3>
+                            <p>이솝 공식 온라인 몰에서 구매하신 미개봉 제품은 구매 후 30일 이내 무료 반품이 가능하며 교환은 반품 후 재주문 또는 전국 이솝 매장에서 가능합니다. 자세한
+                                내용은 <a href="#">자주 묻는 질문</a>을 참고하세요.</p>
+                        </li>
+                        <li>
+                            <h3>온라인 패키징</h3>
+                            <p>이솝은 환경에 미치는 영향을 최소화하기 위한 포장재를 사용하며 내부에는 재활용이 가능한 종이 완충재를 선택해 사용하고 있습니다.</p>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <div class="navWrapper">
+            <nav class="primary">
+                <ul>
+                    <li><button>신제품 & 추천제품</button></li>
+                    <li><button>스킨 케어</button></li>
+                    <li><button>핸드 & 바디</button></li>
+                    <li><button>홈</button></li>
+                    <li><button>헤어</button></li>
+                    <li><button>향수</button></li>
+                    <li><button>키트 & 트래블</button></li>
+                    <li><button>기프트 가이드</button></li>
+                    <li><button>읽기</button></li>
+                    <li><button>스토어</button></li>
+                    <li>
+                        <button class="searchBtn">
+                            <i>
+                                <svg aria-labelledby="search-:r2e:"
+                                    class="Icon_base__ruWRL Icon_light__0Tz7H PrimaryMenu_searchIcon__FGf34"
+                                    data-testid="data-testid-Icon" focusable="false" height="18" role="img"
+                                    tabindex="-1" viewBox="0 0 16 16" width="18" style="height: 18px; width: 18px;">
+                                    <title id="search-:r2e:">search</title>
+                                    <g>
+                                        <path
+                                            d="M11.9544 10.8246C12.8838 9.65831 13.3941 8.18223 13.3941 6.68793C13.3941 3.00683 10.3872 0 6.68793 0C2.98861 0 0 3.00683 0 6.68793C0 10.369 3.00683 13.3759 6.68793 13.3759C8.16401 13.3759 9.64009 12.8656 10.8246 11.9362L14.8519 15.9636L16 14.8155L11.9544 10.8246ZM6.68793 11.7904C3.89977 11.7904 1.62187 9.51253 1.62187 6.72437C1.62187 3.93622 3.89977 1.65831 6.68793 1.65831C9.47608 1.65831 11.754 3.93622 11.754 6.72437C11.754 9.51253 9.47608 11.7904 6.68793 11.7904Z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav class="secondary">
+                <ul>
+                    <li><button>로그인</button></li>
+                    <li><button>위시리스트</button></li>
+                    <li><button>카트</button></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="viewer">
+            <div class="logoArea">
+                <h1>
+                    <a href="#" title="홈으로 돌아가기">
+                        <i>
+                            <svg aria-labelledby="aesop-:r9n:"
+                                class="Icon_base__ruWRL Icon_light__0Tz7H Logo_icon__rjQ3Z"
+                                data-testid="data-testid-Icon" focusable="false" height="40" role="img" tabindex="-1"
+                                viewBox="0 0 489.7 154.3" width="120" style="height: 40px; width: 120px;">
+                                <title aria-label="Aesop" id="aesop-:r9n:">Aesop</title>
+                                <g>
+                                    <path
+                                        d="M48.6,22.5L31.8,62.2h34.2L48.6,22.5z M28.6,70.3c-3.2,7.4-9.6,21.7-14.9,42c-1.9-0.3-3.5-0.9-6.6-0.9c-3.1,0-5,0.6-7.1,0.9C14.3,81.2,38,28.9,49.4,0c1.3,0.2,2.3,0.5,4,0.5c1.4,0,2.3-0.2,3.5-0.5c12.3,33.7,47.8,111.7,48.1,112.3c-2.7-0.5-5.5-0.9-9.5-0.9c-4.2,0-7.2,0.5-10.3,0.9c-5.6-19.2-12.2-33.2-16.2-42H28.6z">
+                                    </path>
+                                    <path
+                                        d="M172.4,66.6c0-5.3,0-26.6-19.2-26.6c-14,0-20.7,10.6-22.2,26.6H172.4z M130.9,73.3c0,4.5,0,13.6,4.3,21c7.4,12.1,17.8,12.5,22.5,12.5c15.7,0,23.1-9.6,25.5-13l1.9,0.4c-1,4.5-1,7.1-1.1,9.6c-7.1,6.7-16.8,10.5-29.8,10.5c-24.4,0-39.3-15.4-39.3-40.1c0-22.1,12.2-40.7,38.5-40.7c35.8,0,35.3,31.1,35.1,39.8H130.9z">
+                                    </path>
+                                    <path
+                                        d="M249.6,52.1c-0.6-2.4-1.6-6.4-6.2-9.6c-3.4-2.4-7.8-2.7-10.4-2.7c-9.8,0-14.9,5.1-14.9,12c0,9.3,9.5,12.7,15.1,14.1c14.3,3.7,25.8,6.7,25.8,22.8c0,12.2-8.5,25.8-30.8,25.8c-13,0-22-5.5-23.7-6.7c2.1-3.9,3.4-10.7,3.7-12.8l1.9-0.5c1.1,2.7,2.7,7.1,8.7,10.6c4,2.4,8.2,3,11.7,3c8.4,0,16.2-4,16.2-13.2c0-9.1-5.5-10.9-22.3-16.4c-6.9-2.3-18.3-7.2-18.3-21.3c0-9.1,5.6-23.9,27.8-23.9c11.1,0,17.5,3.4,21.2,5.3c-1.6,4.2-2.7,8-3.2,13.5H249.6z">
+                                    </path>
+                                    <path
+                                        d="M291.5,73.5c0,22.3,9.8,34.6,24.5,34.6c15.4,0,25.5-13.3,25.5-34.5c0-12.5-3.9-33.8-24.7-33.8C291.5,39.8,291.5,68.6,291.5,73.5 M357.9,73c0,25.5-17.6,41.5-42,41.5c-17,0-40.8-7.7-40.8-40.6c0-25,16.7-40.6,40.8-40.6 C346.3,33.4,357.9,53.4,357.9,73">
+                                    </path>
+                                    <path
+                                        d="M399.4,49.6c-3.2,4-6.6,9.8-6.6,25.7c0,14.1,3.2,19.4,6.6,23.4c4.1,5,9.6,7.9,17,7.9 c22.9,0,22.9-27.1,22.9-32.3c0-24.2-11.6-33-22-33C408.7,41.2,403.1,44.9,399.4,49.6 M419.3,114.7c-15.1,0-23.6-8.3-26.2-14.9 c0,25.2-0.2,39.8,0.8,54.5c-2.4-0.6-4.5-0.9-8.4-0.9c-4,0-6.1,0.3-8.6,0.9c1.3-20.8,1.8-41.9,1.8-62.7c0-14.6-0.3-34.3-0.8-57.6 c2.2,0.5,4.8,0.9,7.9,0.9c2.9,0,5.6-0.5,7.9-0.9c-0.6,8.8-0.6,11.2-0.6,14.6c2.6-4.2,9.5-15.4,27.3-15.4c16,0,35.6,11.7,35.6,40.3 C455.9,98.8,440.3,114.7,419.3,114.7">
+                                    </path>
+                                    <rect x="131.8" y="13.5" width="44.3" height="5"></rect>
+                                    <path
+                                        d="M477.2,98.1c0,1.6,0,3,0,4.4c1.3,0,4.3,0,4.3-2.3C481.5,98.1,479.2,98.1,477.2,98.1 M484.9,109.1 c-0.4,0-0.7-0.1-1.2-0.1c-0.4,0-0.8,0.1-1.5,0.1c-2-2.9-3.6-4.5-4.7-5.8h-0.4c0,1.8,0,3.2,0.2,5.8c-0.5,0-0.7-0.1-1.3-0.1 c-0.6,0-0.8,0.1-1.1,0.1c0.1-1.3,0.2-2.7,0.2-6.2c0-3-0.1-4.4-0.1-5.7c0.9,0,1.5,0,2.9,0c2.9,0,5.9,0,5.9,2.8c0,2.5-2.7,2.9-3.9,3 c0.8,1.1,4.4,5.1,5.1,5.9L484.9,109.1z M479.2,94.8c-4.8,0-8.5,3.8-8.5,8.6c0,4.9,3.6,8.6,8.5,8.6c4.9,0,8.5-3.7,8.5-8.6 C487.8,98.7,484.3,94.8,479.2,94.8 M479.2,92.9c5.9,0,10.5,4.7,10.5,10.5c0,5.9-4.7,10.5-10.5,10.5c-5.8,0-10.5-4.6-10.5-10.5 C468.8,97.5,473.5,92.9,479.2,92.9">
+                                    </path>
+                                </g>
+                            </svg>
+                        </i>
+                    </a>
+                </h1>
+            </div>
+
+            <div class="slideArea">
+                <div class="slide">
+                    <div class="txtWrap">
+                        <div class="contentBox">
+                            <div class="titleBox">
+                                <p class="subTitle">향기로운 선물</p>
+                                <h2 class="mainTitle">디퓨징 디스크 증정</h2>
+                            </div>
+
+                            <div class="desBox">
+                                <p>온라인에서 룸 스프레이 제품을 구매하시면 아로마를 오래 간직하며 은은하게 퍼뜨릴 수 있도록 특별하게 고안된 디퓨징 디스크를 선물로 드립니다.</p>
+                                <p>*재고 소진 시 별도의 안내 없이 변동되거나 증정 종료될 수 있습니다(주문 건 당 1개 증정).</p>
+                            </div>
+                        </div>
+
+                        <div class="linkBtn">
+                            <a href="#">
+                                룸 스프레이 둘러보기
+                                <i>
+                                    <svg aria-labelledby="rightArrow-:rk:" class="Icon_base__ruWRL Icon_dark__YP_ta"
+                                        data-testid="data-testid-Icon" focusable="false" height="12" role="img"
+                                        tabindex="-1" viewBox="0 0 50 50" width="12" style="height: 12px; width: 12px;">
+                                        <title id="rightArrow-:rk:">rightArrow</title>
+                                        <g>
+                                            <path
+                                                d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <picture class="responsiveMedia">
+                        <source media="(min-width: 1920px)"
+                            srcset="https://www.aesop.com/u1nb1km7t5q7/1kmAZwCe8Vi7Zizjs32uNp/0075379d484ac820c0cb823d25734fe7/Aesop_Campaign_Web_Homepage_Secondary_50-50_Desktop_XL_2560x1200px.jpg">
+                        <source media="(min-width: 1025px)"
+                            srcset="https://www.aesop.com/u1nb1km7t5q7/3RJlBS4abfW4VOu8lcqnxs/e093da2c53a0292a3c03f998cd424a10/Aesop_Campaign_Web_Homepage_Secondary_50-50_Desktop_1440x1500px.jpg">
+                        <source media="(min-width: 640px)"
+                            srcset="https://www.aesop.com/u1nb1km7t5q7/dX2NNxQXEI4FxQa7xxPue/3205fad03bedba6f1e40f12de9147ce7/Aesop_Campaign_Web_Homepage_Secondary_50-50_Tablet_1536x950px.jpg">
+                        <source media="(min-width: 0px)"
+                            srcset="https://www.aesop.com/u1nb1km7t5q7/3YtcHdQCflbQ6H1TsaxYv9/bcc34cd0a780ceb6b467a01d6ed8f71c/Aesop_Campaign_Web_Homepage_Secondary_50-50_Mobile_900x900px.jpg">
+                        <img alt="An Aesop room spray on the of the diffusing disc" loading="eager"
+                            src="https://www.aesop.com/u1nb1km7t5q7/3RJlBS4abfW4VOu8lcqnxs/e093da2c53a0292a3c03f998cd424a10/Aesop_Campaign_Web_Homepage_Secondary_50-50_Desktop_1440x1500px.jpg">
+                    </picture>
+                </div>
+
+                <div class="slide">
+                    <div class="txtWrap">
+                        <div class="contentBox">
+                            <div class="titleBox">
+                                <h2 class="mainTitle">감각적인 실내 공간을 위한 홈 프래그런스​
+                                </h2>
+                            </div>
+
+                            <div class="desBox">
+                                <p>분위기 전환이 필요한 가정이나 사무실에 이상적인 이솝의 홈 레인지는 아로마틱 인센스, 룸 스프레이 등 다양한 방향 제품으로 구성되어 있습니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="linkBtn">
+                            <a href="#">
+                                센티드 홈 보기
+                                <i>
+                                    <svg aria-labelledby="rightArrow-:rk:" class="Icon_base__ruWRL Icon_dark__YP_ta"
+                                        data-testid="data-testid-Icon" focusable="false" height="12" role="img"
+                                        tabindex="-1" viewBox="0 0 50 50" width="12" style="height: 12px; width: 12px;">
+                                        <title id="rightArrow-:rk:">rightArrow</title>
+                                        <g>
+                                            <path
+                                                d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <picture class="responsiveMedia">
+                        <source media="(min-width: 1920px)"
+                            srcset="https://www.aesop.com/u1nb1km7t5q7/6PZe1xSj5TaAnCs3dkaokN/f73eeb7b125805061fef8c7d7c90b4e0/Aesop_Home_2023_Scented_Home_Web_Homepage_Primary_50-50_Desktop_XL_2560x1200px.jpg">
+                        <source media="(min-width: 1025px)"
+                            srcset="https://www.aesop.com/u1nb1km7t5q7/3hoLsIfewhHA3Zwnxt1MF4/641a8bbf30afe663524ae0aa63dfe5e0/Aesop_Home_2023_Scented_Home_Web_Homepage_Primary_50-50_Desktop_1440x1500px.jpg">
+                        <source media="(min-width: 640px)"
+                            srcset="https://www.aesop.com/u1nb1km7t5q7/7CNHNRrqvndstDa58953ug/29bb632bbcfd8b3a96da20449b27c09c/Aesop_Home_2023_Scented_Home_Web_Homepage_Primary_50-50_Tablet_1536x950px.jpg">
+                        <source media="(min-width: 0px)"
+                            srcset="https://www.aesop.com/u1nb1km7t5q7/18n3b5339fJesx8glB24l0/188bfeeb8e33c3800dc2ac5516f952c7/Aesop_Home_2023_Scented_Home_Web_Homepage_Primary_50-50_Mobile_640x640px.jpg">
+                        <img alt="A lit Aromatique Candle sitting on a textured earth toned surface, alongside an amber bottle of Olous Aromatique Room Spray and Brass Oil Burner."
+                            loading="eager"
+                            src="https://www.aesop.com/u1nb1km7t5q7/3hoLsIfewhHA3Zwnxt1MF4/641a8bbf30afe663524ae0aa63dfe5e0/Aesop_Home_2023_Scented_Home_Web_Homepage_Primary_50-50_Desktop_1440x1500px.jpg">
+                    </picture>
+                </div>
+
+                <div class="slide">
+                    <div class="txtWrap">
+                        <div class="contentBox">
+                            <div class="titleBox">
+                                <p class="subTitle">가장 빛나는 순간의 피부</p>
+                                <h2 class="mainTitle">루센트 페이셜 리파이너</h2>
+                            </div>
+
+                            <div class="desBox">
+                                <p>피부의 결과 톤을 고르게 가꿔주는 부드러운 각질 케어 마스크로, 독자적인 성분 조합이 피부를 정돈하고 영양을 공급합니다.</p>
+                            </div>
+                        </div>
+
+                        <div class="linkBtn">
+                            <a href="#">
+                                루센트 페이셜 리파이너 보기
+                                <i>
+                                    <svg aria-labelledby="rightArrow-:rk:" class="Icon_base__ruWRL Icon_dark__YP_ta"
+                                        data-testid="data-testid-Icon" focusable="false" height="12" role="img"
+                                        tabindex="-1" viewBox="0 0 50 50" width="12" style="height: 12px; width: 12px;">
+                                        <title id="rightArrow-:rk:">rightArrow</title>
+                                        <g>
+                                            <path
+                                                d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                </i>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="responsiveMedia" role="group">
+                        <!-- 비디오 로딩 전 이미지 -->
+                        <figure class="fallbackImg">
+                            <picture class="responsiveMedia">
+                                <source media="(min-width: 1025px)"
+                                    srcset="https://www.aesop.com/u1nb1km7t5q7/6OcpWzTnTSZh2uiUnYjYDl/b9d2ef8478d92401f9f61b83fd2ef8ed/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1920x1080px.jpg">
+                                <source media="(min-width: 640px)"
+                                    srcset="https://www.aesop.com/u1nb1km7t5q7/6OcpWzTnTSZh2uiUnYjYDl/b9d2ef8478d92401f9f61b83fd2ef8ed/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1920x1080px.jpg">
+                                <source media="(min-width: 0px)"
+                                    srcset="https://www.aesop.com/u1nb1km7t5q7/3R2XQArQ0e4EFbltrNlmZZ/b9569e7494a8a35d9bdd2f307863c219/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1080x1080px.jpg">
+                                <img alt="Light bulbs surrounding a jar of Lucent Facial Refiner." loading="lazy"
+                                    src="https://www.aesop.com/u1nb1km7t5q7/6OcpWzTnTSZh2uiUnYjYDl/b9d2ef8478d92401f9f61b83fd2ef8ed/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1920x1080px.jpg">
+                            </picture>
+                        </figure>
+                        
+                        <!-- 실제 영상 -->
+                        <video autoplay="" class="VideoPlayer_base___CVer" crossorigin="anonymous"
+                            data-testid="data-testid-VideoPlayer" loop="" playsinline=""
+                            src="https://videos.ctfassets.net/u1nb1km7t5q7/5XANdNCX5B4Hm6vBWt2uhr/6e735706bb0a965d44e38bf092735e4b/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1920x1080px.mp4">
+                            <source
+                                src="https://videos.ctfassets.net/u1nb1km7t5q7/5XANdNCX5B4Hm6vBWt2uhr/6e735706bb0a965d44e38bf092735e4b/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1920x1080px.mp4"
+                                type="video/mp4">
+                        </video>
+                        
+                        <!-- 영상이 로딩 중일 때 보여줄 버튼 (포스터 이미지 포함) -->
+                        <button
+                            class="Button_base__7AwOF Button_dark__Vllu2 Poster_base__j4HTR Transition_fadeEnter__FmNEN"
+                            type="button">
+                            <picture class="Image_base__sC3Gl Image_picture___KjWN">
+                                <source media="(min-width: 1025px)"
+                                    srcset="https://www.aesop.com/u1nb1km7t5q7/6OcpWzTnTSZh2uiUnYjYDl/b9d2ef8478d92401f9f61b83fd2ef8ed/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1920x1080px.jpg">
+                                <source media="(min-width: 640px)"
+                                    srcset="https://www.aesop.com/u1nb1km7t5q7/6OcpWzTnTSZh2uiUnYjYDl/b9d2ef8478d92401f9f61b83fd2ef8ed/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1920x1080px.jpg">
+                                <source media="(min-width: 0px)"
+                                    srcset="https://www.aesop.com/u1nb1km7t5q7/3R2XQArQ0e4EFbltrNlmZZ/b9569e7494a8a35d9bdd2f307863c219/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1080x1080px.jpg">
+                                <img alt="Light bulbs surrounding a jar of Lucent Facial Refiner." loading="lazy"
+                                    src="https://www.aesop.com/u1nb1km7t5q7/6OcpWzTnTSZh2uiUnYjYDl/b9d2ef8478d92401f9f61b83fd2ef8ed/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1920x1080px.jpg">
+                            </picture>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="viewerControl">
+            <button class="prevBtn">
+                <i>
+                    <svg aria-labelledby="chevron-:Riofam:" class="Icon_base__ruWRL Icon_dark__YP_ta"
+                        data-testid="data-testid-Icon" focusable="false" height="14" role="img"
+                        style="height:14px;width:14px" tabindex="-1" viewBox="0 0 50 50" width="14">
+                        <title id="chevron-:Riofam:">chevron</title>
+                        <g>
+                            <polygon points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5"></polygon>
+                        </g>
+                    </svg>
+                </i>
+            </button>
+            <span class="viewCount"><span class="currentView">1</span>/<span class="totalView">3</span></span>
+            <button class="nextBtn">
+                <i>
+                    <svg aria-labelledby="chevron-:Rmofam:" class="Icon_base__ruWRL Icon_dark__YP_ta"
+                        data-testid="data-testid-Icon" focusable="false" height="14" role="img"
+                        style="height:14px;width:14px" tabindex="-1" viewBox="0 0 50 50" width="14">
+                        <title id="chevron-:Rmofam:">chevron</title>
+                        <g>
+                            <polygon points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5"></polygon>
+                        </g>
+                    </svg>
+                </i>
+            </button>
+            <button class="pauseBtn">
+                <i>
+                    <svg aria-labelledby="pauseSlim-:R58fam:" class="Icon_base__ruWRL Icon_dark__YP_ta"
+                        data-testid="data-testid-Icon" focusable="false" height="14" role="img"
+                        style="height:14px;width:14px" tabindex="-1" viewBox="0 0 8 12" width="14">
+                        <title id="pauseSlim-:R58fam:">pauseSlim</title>
+                        <g>
+                            <path
+                                d="M1.2 0.75C0.813401 0.75 0.5 0.985051 0.5 1.275V10.725C0.5 11.0149 0.813401 11.25 1.2 11.25C1.5866 11.25 1.9 11.0149 1.9 10.725V1.275C1.9 0.985051 1.5866 0.75 1.2 0.75Z">
+                            </path>
+                            <path
+                                d="M6.8001 0.75C6.4135 0.75 6.1001 0.985051 6.1001 1.275V10.725C6.1001 11.0149 6.4135 11.25 6.8001 11.25C7.1867 11.25 7.5001 11.0149 7.5001 10.725V1.275C7.5001 0.985051 7.1867 0.75 6.8001 0.75Z">
+                            </path>
+                        </g>
+                    </svg>
+                </i>
+            </button>
+        </div>
+    </main>
+
+    <section>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+    </section>
+
+    <footer></footer>
+
+</body>
+
+</html>

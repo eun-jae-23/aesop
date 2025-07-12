@@ -1,0 +1,22 @@
+/* 
+
+1. Suisse
+    font-display: swap;
+    font-family: Suisse, sans-serif;
+    font-weight: 400|700;
+
+*/
+
+@font-face {
+    font-display: swap;
+    font-family: Suisse;
+    font-weight: 400;
+    src: url(SuisseIntl-Regular-WebS.a55b96fd.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Suisse;
+    font-weight: 700;
+    src: url(SuisseIntl-Medium-WebS.5ee1ad41.woff2) format("woff2")
+}

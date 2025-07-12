@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+
+/* float 해제 */
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* font 기본 설정 */
+body {
+    /* 기본색 - 333 */
+    color: #333;
+
+    /* 기본 폰트(Suisse) 및 weight */
+    font-family: Suisse, sans-serif;
+    font-weight: 400;
+
+}
+
+
+
+/* CSS 초기화 */
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+}
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu,nav,section {
+    display: block;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a {
+    /* 기본 폰트 : Suisse|400 */
+    font-family: Suisse, sans-serif;
+    font-weight: 400;
+
+    font-size: 100%; /* reset시에는 폰트 사이즈는 100%! */
+    vertical-align: baseline;
+    background: transparent;
+    text-decoration: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+b {
+    font-weight: 800;
+}
+
+caption {
+    display: none;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+strong {
+    font-family: Suisse, sans-serif;
+    font-weight: 700;
+}
+
+
+/* 
+hr {
+    display: block;
+    height: 2px;
+    border: 0;
+}
+ */
+
+/* table 셀과 셀 사이 여백 제거 */
+table {
+    border-collapse: collapse;
+}
+
+/* ****폼태그 관련 reset**** */
+
+input, textarea, select{
+/* width: 100%; */
+vertical-align: top;
+border: 0;
+border-radius: 0;
+box-sizing: content-box;
+
+appearance: none; /* 최신 브라우저에서 지원하므로 webkit,moz 적용 */
+-webkit-appearance: none; /* Safari, Chrome */
+-moz-appearance: none; /* Firefox */
+}
+
+/*
+****placeholder 관련 reset****
+IE 10+ 이상에서만 placeholder 속성이 적용됨.
+그 이하 버전은 적용되지 않음
+*/
+
+::-moz-input-placeholder, ::-moz-textarea-placeholder{
+color: #3f51b5;
+}
+
+::-webkit-input-placeholder, ::-webkit-textarea-placeholder{
+color: #3f51b5;
+}
+
+::-ms-input-placeholder, ::-ms-textarea-placeholder{
+    color: #3f51b5;
+    }
+
+fieldset {
+    border: none;
+}
+
+legend {
+    display: none;
+}
+
+
