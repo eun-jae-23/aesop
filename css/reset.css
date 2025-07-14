@@ -54,6 +54,8 @@ a {
     vertical-align: baseline;
     background: transparent;
     text-decoration: none;
+
+    display: block; /* a 태그는 기본적으로 inline 속성이므로, block 속성으로 변경 */
 }
 
 img {
