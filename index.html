@@ -13,7 +13,10 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
 
-    <!-- css : header, index, footer -->
+    <!-- Swiper CSS (기본 스와이퍼 스타일) -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <!-- css : header, index, footer (커스텀 스타일) -->
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -21,11 +24,6 @@
     <!-- css : responsive -->
     <link rel="stylesheet" href="css/responsive.css">
 
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <!-- js -->
-    <script src="js/index.js"></script>
 
     <style>
         /* 숨김처리 후, 다른 파트 디자인 다 만들고 디자인 적용할 요소들 */
@@ -111,51 +109,123 @@
         </div>
 
         <div class="navWrapper">
-            <nav class="primary">
-                <ul>
-                    <li><button>신제품 & 추천제품</button></li>
-                    <li><button>스킨 케어</button></li>
-                    <li><button>핸드 & 바디</button></li>
-                    <li><button>홈</button></li>
-                    <li><button>헤어</button></li>
-                    <li><button>향수</button></li>
-                    <li><button>키트 & 트래블</button></li>
-                    <li><button>기프트 가이드</button></li>
-                    <li><button>읽기</button></li>
-                    <li><button>스토어</button></li>
-                    <li>
-                        <button class="searchBtn">
+            <div class="pcNav">
+                <nav class="primary">
+                    <ul>
+                        <li><button><a href="#">신제품 & 추천제품</a></button></li>
+                        <li><button><a href="#">스킨 케어</a></button></li>
+                        <li><button><a href="#">핸드 & 바디</a></button></li>
+                        <li><button><a href="#">홈</a></button></li>
+                        <li><button><a href="#">헤어</a></button></li>
+                        <li><button><a href="#">향수</a></button></li>
+                        <li><button><a href="#">키트 & 트래블</a></button></li>
+                        <li><button><a href="#">기프트 가이드</a></button></li>
+                        <li><button><a href="#">읽기</a></button></li>
+                        <li><button><a href="#">스토어</a></button></li>
+                        <li>
+                            <button class="searchBtn">
+                                <a href="#">
+                                    <i>
+                                        <svg aria-labelledby="search-:r2e:"
+                                            class="Icon_base__ruWRL Icon_light__0Tz7H PrimaryMenu_searchIcon__FGf34"
+                                            data-testid="data-testid-Icon" focusable="false" height="18" role="img"
+                                            tabindex="-1" viewBox="0 0 16 16" width="18"
+                                            style="height: 18px; width: 18px;">
+                                            <title id="search-:r2e:">search</title>
+                                            <g>
+                                                <path
+                                                    d="M11.9544 10.8246C12.8838 9.65831 13.3941 8.18223 13.3941 6.68793C13.3941 3.00683 10.3872 0 6.68793 0C2.98861 0 0 3.00683 0 6.68793C0 10.369 3.00683 13.3759 6.68793 13.3759C8.16401 13.3759 9.64009 12.8656 10.8246 11.9362L14.8519 15.9636L16 14.8155L11.9544 10.8246ZM6.68793 11.7904C3.89977 11.7904 1.62187 9.51253 1.62187 6.72437C1.62187 3.93622 3.89977 1.65831 6.68793 1.65831C9.47608 1.65831 11.754 3.93622 11.754 6.72437C11.754 9.51253 9.47608 11.7904 6.68793 11.7904Z">
+                                                </path>
+                                            </g>
+                                        </svg>
+                                    </i>
+                                </a>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav class="secondary">
+                    <ul>
+                        <li><button><a href="#">로그인</a></button></li>
+                        <li><button><a href="#">위시리스트</a></button></li>
+                        <li><button><a href="#">카트</a></button></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="moblieNav">
+                <div class="logoArea">
+                    <h1>
+                        <a href="#" title="홈으로 돌아가기">
                             <i>
-                                <svg aria-labelledby="search-:r2e:"
-                                    class="Icon_base__ruWRL Icon_light__0Tz7H PrimaryMenu_searchIcon__FGf34"
-                                    data-testid="data-testid-Icon" focusable="false" height="18" role="img"
-                                    tabindex="-1" viewBox="0 0 16 16" width="18" style="height: 18px; width: 18px;">
-                                    <title id="search-:r2e:">search</title>
+                                <svg aria-labelledby="aesop-:r9n:"
+                                    class="Icon_base__ruWRL Icon_light__0Tz7H Logo_icon__rjQ3Z"
+                                    data-testid="data-testid-Icon" focusable="false" height="40" role="img"
+                                    tabindex="-1" viewBox="0 0 489.7 154.3" width="120"
+                                    style="height: 40px; width: 120px;">
+                                    <title aria-label="Aesop" id="aesop-:r9n:">Aesop</title>
                                     <g>
                                         <path
-                                            d="M11.9544 10.8246C12.8838 9.65831 13.3941 8.18223 13.3941 6.68793C13.3941 3.00683 10.3872 0 6.68793 0C2.98861 0 0 3.00683 0 6.68793C0 10.369 3.00683 13.3759 6.68793 13.3759C8.16401 13.3759 9.64009 12.8656 10.8246 11.9362L14.8519 15.9636L16 14.8155L11.9544 10.8246ZM6.68793 11.7904C3.89977 11.7904 1.62187 9.51253 1.62187 6.72437C1.62187 3.93622 3.89977 1.65831 6.68793 1.65831C9.47608 1.65831 11.754 3.93622 11.754 6.72437C11.754 9.51253 9.47608 11.7904 6.68793 11.7904Z">
+                                            d="M48.6,22.5L31.8,62.2h34.2L48.6,22.5z M28.6,70.3c-3.2,7.4-9.6,21.7-14.9,42c-1.9-0.3-3.5-0.9-6.6-0.9c-3.1,0-5,0.6-7.1,0.9C14.3,81.2,38,28.9,49.4,0c1.3,0.2,2.3,0.5,4,0.5c1.4,0,2.3-0.2,3.5-0.5c12.3,33.7,47.8,111.7,48.1,112.3c-2.7-0.5-5.5-0.9-9.5-0.9c-4.2,0-7.2,0.5-10.3,0.9c-5.6-19.2-12.2-33.2-16.2-42H28.6z">
+                                        </path>
+                                        <path
+                                            d="M172.4,66.6c0-5.3,0-26.6-19.2-26.6c-14,0-20.7,10.6-22.2,26.6H172.4z M130.9,73.3c0,4.5,0,13.6,4.3,21c7.4,12.1,17.8,12.5,22.5,12.5c15.7,0,23.1-9.6,25.5-13l1.9,0.4c-1,4.5-1,7.1-1.1,9.6c-7.1,6.7-16.8,10.5-29.8,10.5c-24.4,0-39.3-15.4-39.3-40.1c0-22.1,12.2-40.7,38.5-40.7c35.8,0,35.3,31.1,35.1,39.8H130.9z">
+                                        </path>
+                                        <path
+                                            d="M249.6,52.1c-0.6-2.4-1.6-6.4-6.2-9.6c-3.4-2.4-7.8-2.7-10.4-2.7c-9.8,0-14.9,5.1-14.9,12c0,9.3,9.5,12.7,15.1,14.1c14.3,3.7,25.8,6.7,25.8,22.8c0,12.2-8.5,25.8-30.8,25.8c-13,0-22-5.5-23.7-6.7c2.1-3.9,3.4-10.7,3.7-12.8l1.9-0.5c1.1,2.7,2.7,7.1,8.7,10.6c4,2.4,8.2,3,11.7,3c8.4,0,16.2-4,16.2-13.2c0-9.1-5.5-10.9-22.3-16.4c-6.9-2.3-18.3-7.2-18.3-21.3c0-9.1,5.6-23.9,27.8-23.9c11.1,0,17.5,3.4,21.2,5.3c-1.6,4.2-2.7,8-3.2,13.5H249.6z">
+                                        </path>
+                                        <path
+                                            d="M291.5,73.5c0,22.3,9.8,34.6,24.5,34.6c15.4,0,25.5-13.3,25.5-34.5c0-12.5-3.9-33.8-24.7-33.8C291.5,39.8,291.5,68.6,291.5,73.5 M357.9,73c0,25.5-17.6,41.5-42,41.5c-17,0-40.8-7.7-40.8-40.6c0-25,16.7-40.6,40.8-40.6 C346.3,33.4,357.9,53.4,357.9,73">
+                                        </path>
+                                        <path
+                                            d="M399.4,49.6c-3.2,4-6.6,9.8-6.6,25.7c0,14.1,3.2,19.4,6.6,23.4c4.1,5,9.6,7.9,17,7.9 c22.9,0,22.9-27.1,22.9-32.3c0-24.2-11.6-33-22-33C408.7,41.2,403.1,44.9,399.4,49.6 M419.3,114.7c-15.1,0-23.6-8.3-26.2-14.9 c0,25.2-0.2,39.8,0.8,54.5c-2.4-0.6-4.5-0.9-8.4-0.9c-4,0-6.1,0.3-8.6,0.9c1.3-20.8,1.8-41.9,1.8-62.7c0-14.6-0.3-34.3-0.8-57.6 c2.2,0.5,4.8,0.9,7.9,0.9c2.9,0,5.6-0.5,7.9-0.9c-0.6,8.8-0.6,11.2-0.6,14.6c2.6-4.2,9.5-15.4,27.3-15.4c16,0,35.6,11.7,35.6,40.3 C455.9,98.8,440.3,114.7,419.3,114.7">
+                                        </path>
+                                        <rect x="131.8" y="13.5" width="44.3" height="5"></rect>
+                                        <path
+                                            d="M477.2,98.1c0,1.6,0,3,0,4.4c1.3,0,4.3,0,4.3-2.3C481.5,98.1,479.2,98.1,477.2,98.1 M484.9,109.1 c-0.4,0-0.7-0.1-1.2-0.1c-0.4,0-0.8,0.1-1.5,0.1c-2-2.9-3.6-4.5-4.7-5.8h-0.4c0,1.8,0,3.2,0.2,5.8c-0.5,0-0.7-0.1-1.3-0.1 c-0.6,0-0.8,0.1-1.1,0.1c0.1-1.3,0.2-2.7,0.2-6.2c0-3-0.1-4.4-0.1-5.7c0.9,0,1.5,0,2.9,0c2.9,0,5.9,0,5.9,2.8c0,2.5-2.7,2.9-3.9,3 c0.8,1.1,4.4,5.1,5.1,5.9L484.9,109.1z M479.2,94.8c-4.8,0-8.5,3.8-8.5,8.6c0,4.9,3.6,8.6,8.5,8.6c4.9,0,8.5-3.7,8.5-8.6 C487.8,98.7,484.3,94.8,479.2,94.8 M479.2,92.9c5.9,0,10.5,4.7,10.5,10.5c0,5.9-4.7,10.5-10.5,10.5c-5.8,0-10.5-4.6-10.5-10.5 C468.8,97.5,473.5,92.9,479.2,92.9">
                                         </path>
                                     </g>
                                 </svg>
                             </i>
-                        </button>
-                    </li>
-                </ul>
-            </nav>
+                        </a>
+                    </h1>
+                </div>
 
-            <nav class="secondary">
-                <ul>
-                    <li><button>로그인</button></li>
-                    <li><button>위시리스트</button></li>
-                    <li><button>카트</button></li>
-                </ul>
-            </nav>
+                <nav>
+                    <ul>
+                        <li>
+                            <button class="searchBtn">
+                                <a href="#">
+                                    <i>
+                                        <svg aria-labelledby="search-:r2e:"
+                                            class="Icon_base__ruWRL Icon_light__0Tz7H PrimaryMenu_searchIcon__FGf34"
+                                            data-testid="data-testid-Icon" focusable="false" height="18" role="img"
+                                            tabindex="-1" viewBox="0 0 16 16" width="18"
+                                            style="height: 18px; width: 18px;">
+                                            <title id="search-:r2e:">search</title>
+                                            <g>
+                                                <path
+                                                    d="M11.9544 10.8246C12.8838 9.65831 13.3941 8.18223 13.3941 6.68793C13.3941 3.00683 10.3872 0 6.68793 0C2.98861 0 0 3.00683 0 6.68793C0 10.369 3.00683 13.3759 6.68793 13.3759C8.16401 13.3759 9.64009 12.8656 10.8246 11.9362L14.8519 15.9636L16 14.8155L11.9544 10.8246ZM6.68793 11.7904C3.89977 11.7904 1.62187 9.51253 1.62187 6.72437C1.62187 3.93622 3.89977 1.65831 6.68793 1.65831C9.47608 1.65831 11.754 3.93622 11.754 6.72437C11.754 9.51253 9.47608 11.7904 6.68793 11.7904Z">
+                                                </path>
+                                            </g>
+                                        </svg>
+                                    </i>
+                                </a>
+                            </button>
+                        </li>
+                        <li><button class="wishBtn"><a href="#"></a></button></li>
+                        <li><button class="cartBtn"><a href="#"></a></button></li>
+                        <li><button class="cartBtn"><a href="#"></a></button></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
 
     </header>
 
     <main>
-        <div class="viewer">
+        <div class="container">
             <div class="logoArea">
                 <h1>
                     <a href="#" title="홈으로 돌아가기">
@@ -192,235 +262,254 @@
                 </h1>
             </div>
 
-            <div class="slideArea">
-                <div class="slide">
-                    <div class="txtWrap">
-                        <div class="contentBox">
-                            <div class="titleBox">
-                                <p class="subTitle">향기로운 선물</p>
-                                <h2 class="mainTitle">디퓨징 디스크 증정</h2>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="txtWrap">
+                            <div class="contentBox">
+                                <div class="titleBox">
+                                    <p class="subTitle">향기로운 선물</p>
+                                    <h2 class="mainTitle">디퓨징 디스크 증정</h2>
+                                </div>
+
+                                <div class="desBox">
+                                    <p>온라인에서 룸 스프레이 제품을 구매하시면 아로마를 오래 간직하며 은은하게 퍼뜨릴 수 있도록 특별하게 고안된 디퓨징 디스크를 선물로
+                                        드립니다.
+                                    </p>
+                                    <p>*재고 소진 시 별도의 안내 없이 변동되거나 증정 종료될 수 있습니다(주문 건 당 1개 증정).</p>
+                                </div>
                             </div>
 
-                            <div class="desBox">
-                                <p>온라인에서 룸 스프레이 제품을 구매하시면 아로마를 오래 간직하며 은은하게 퍼뜨릴 수 있도록 특별하게 고안된 디퓨징 디스크를 선물로 드립니다.</p>
-                                <p>*재고 소진 시 별도의 안내 없이 변동되거나 증정 종료될 수 있습니다(주문 건 당 1개 증정).</p>
-                            </div>
-                        </div>
-
-                        <div class="linkBtn">
-                            <a href="#">
-                                룸 스프레이 둘러보기
-                                <i>
-                                    <svg aria-labelledby="rightArrow-:rk:" class="Icon_base__ruWRL Icon_dark__YP_ta"
-                                        data-testid="data-testid-Icon" focusable="false" height="12" role="img"
-                                        tabindex="-1" viewBox="0 0 50 50" width="12" style="height: 12px; width: 12px;">
-                                        <title id="rightArrow-:rk:">rightArrow</title>
-                                        <g>
-                                            <path
-                                                d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z">
-                                            </path>
-                                        </g>
-                                    </svg>
-                                </i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <picture class="responsiveMedia">
-                        <source media="(min-width: 1920px)"
-                            srcset="https://www.aesop.com/u1nb1km7t5q7/1kmAZwCe8Vi7Zizjs32uNp/0075379d484ac820c0cb823d25734fe7/Aesop_Campaign_Web_Homepage_Secondary_50-50_Desktop_XL_2560x1200px.jpg">
-                        <source media="(min-width: 1025px)"
-                            srcset="https://www.aesop.com/u1nb1km7t5q7/3RJlBS4abfW4VOu8lcqnxs/e093da2c53a0292a3c03f998cd424a10/Aesop_Campaign_Web_Homepage_Secondary_50-50_Desktop_1440x1500px.jpg">
-                        <source media="(min-width: 640px)"
-                            srcset="https://www.aesop.com/u1nb1km7t5q7/dX2NNxQXEI4FxQa7xxPue/3205fad03bedba6f1e40f12de9147ce7/Aesop_Campaign_Web_Homepage_Secondary_50-50_Tablet_1536x950px.jpg">
-                        <source media="(min-width: 0px)"
-                            srcset="https://www.aesop.com/u1nb1km7t5q7/3YtcHdQCflbQ6H1TsaxYv9/bcc34cd0a780ceb6b467a01d6ed8f71c/Aesop_Campaign_Web_Homepage_Secondary_50-50_Mobile_900x900px.jpg">
-                        <img alt="An Aesop room spray on the of the diffusing disc" loading="eager"
-                            src="https://www.aesop.com/u1nb1km7t5q7/3RJlBS4abfW4VOu8lcqnxs/e093da2c53a0292a3c03f998cd424a10/Aesop_Campaign_Web_Homepage_Secondary_50-50_Desktop_1440x1500px.jpg">
-                    </picture>
-                </div>
-
-                <div class="slide">
-                    <div class="txtWrap">
-                        <div class="contentBox">
-                            <div class="titleBox">
-                                <h2 class="mainTitle">감각적인 실내 공간을 위한 홈 프래그런스​
-                                </h2>
-                            </div>
-
-                            <div class="desBox">
-                                <p>분위기 전환이 필요한 가정이나 사무실에 이상적인 이솝의 홈 레인지는 아로마틱 인센스, 룸 스프레이 등 다양한 방향 제품으로 구성되어 있습니다.</p>
+                            <div class="linkBtn">
+                                <a href="#">
+                                    룸 스프레이 둘러보기
+                                    <i>
+                                        <svg aria-labelledby="rightArrow-:rk:" class="Icon_base__ruWRL Icon_dark__YP_ta"
+                                            data-testid="data-testid-Icon" focusable="false" height="12" role="img"
+                                            tabindex="-1" viewBox="0 0 50 50" width="12"
+                                            style="height: 12px; width: 12px;">
+                                            <title id="rightArrow-:rk:">rightArrow</title>
+                                            <g>
+                                                <path
+                                                    d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z">
+                                                </path>
+                                            </g>
+                                        </svg>
+                                    </i>
+                                </a>
                             </div>
                         </div>
 
-                        <div class="linkBtn">
-                            <a href="#">
-                                센티드 홈 보기
-                                <i>
-                                    <svg aria-labelledby="rightArrow-:rk:" class="Icon_base__ruWRL Icon_dark__YP_ta"
-                                        data-testid="data-testid-Icon" focusable="false" height="12" role="img"
-                                        tabindex="-1" viewBox="0 0 50 50" width="12" style="height: 12px; width: 12px;">
-                                        <title id="rightArrow-:rk:">rightArrow</title>
-                                        <g>
-                                            <path
-                                                d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z">
-                                            </path>
-                                        </g>
-                                    </svg>
-                                </i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <picture class="responsiveMedia">
-                        <source media="(min-width: 1920px)"
-                            srcset="https://www.aesop.com/u1nb1km7t5q7/6PZe1xSj5TaAnCs3dkaokN/f73eeb7b125805061fef8c7d7c90b4e0/Aesop_Home_2023_Scented_Home_Web_Homepage_Primary_50-50_Desktop_XL_2560x1200px.jpg">
-                        <source media="(min-width: 1025px)"
-                            srcset="https://www.aesop.com/u1nb1km7t5q7/3hoLsIfewhHA3Zwnxt1MF4/641a8bbf30afe663524ae0aa63dfe5e0/Aesop_Home_2023_Scented_Home_Web_Homepage_Primary_50-50_Desktop_1440x1500px.jpg">
-                        <source media="(min-width: 640px)"
-                            srcset="https://www.aesop.com/u1nb1km7t5q7/7CNHNRrqvndstDa58953ug/29bb632bbcfd8b3a96da20449b27c09c/Aesop_Home_2023_Scented_Home_Web_Homepage_Primary_50-50_Tablet_1536x950px.jpg">
-                        <source media="(min-width: 0px)"
-                            srcset="https://www.aesop.com/u1nb1km7t5q7/18n3b5339fJesx8glB24l0/188bfeeb8e33c3800dc2ac5516f952c7/Aesop_Home_2023_Scented_Home_Web_Homepage_Primary_50-50_Mobile_640x640px.jpg">
-                        <img alt="A lit Aromatique Candle sitting on a textured earth toned surface, alongside an amber bottle of Olous Aromatique Room Spray and Brass Oil Burner."
-                            loading="eager"
-                            src="https://www.aesop.com/u1nb1km7t5q7/3hoLsIfewhHA3Zwnxt1MF4/641a8bbf30afe663524ae0aa63dfe5e0/Aesop_Home_2023_Scented_Home_Web_Homepage_Primary_50-50_Desktop_1440x1500px.jpg">
-                    </picture>
-                </div>
-
-                <div class="slide">
-                    <div class="txtWrap">
-                        <div class="contentBox">
-                            <div class="titleBox">
-                                <p class="subTitle">가장 빛나는 순간의 피부</p>
-                                <h2 class="mainTitle">루센트 페이셜 리파이너</h2>
-                            </div>
-
-                            <div class="desBox">
-                                <p>피부의 결과 톤을 고르게 가꿔주는 부드러운 각질 케어 마스크로, 독자적인 성분 조합이 피부를 정돈하고 영양을 공급합니다.</p>
-                            </div>
-                        </div>
-
-                        <div class="linkBtn">
-                            <a href="#">
-                                루센트 페이셜 리파이너 보기
-                                <i>
-                                    <svg aria-labelledby="rightArrow-:rk:" class="Icon_base__ruWRL Icon_dark__YP_ta"
-                                        data-testid="data-testid-Icon" focusable="false" height="12" role="img"
-                                        tabindex="-1" viewBox="0 0 50 50" width="12" style="height: 12px; width: 12px;">
-                                        <title id="rightArrow-:rk:">rightArrow</title>
-                                        <g>
-                                            <path
-                                                d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z">
-                                            </path>
-                                        </g>
-                                    </svg>
-                                </i>
-                            </a>
-                        </div>
-                    </div>
-
-
-                    <div class="responsiveMedia" role="group">
-                        <!-- 비디오 로딩 전 이미지 -->
-                        <figure class="fallbackImg">
+                        <figure class="mediaWrap">
                             <picture class="responsiveMedia">
+                                <source media="(min-width: 1920px)"
+                                    srcset="https://www.aesop.com/u1nb1km7t5q7/1kmAZwCe8Vi7Zizjs32uNp/0075379d484ac820c0cb823d25734fe7/Aesop_Campaign_Web_Homepage_Secondary_50-50_Desktop_XL_2560x1200px.jpg">
                                 <source media="(min-width: 1025px)"
-                                    srcset="https://www.aesop.com/u1nb1km7t5q7/6OcpWzTnTSZh2uiUnYjYDl/b9d2ef8478d92401f9f61b83fd2ef8ed/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1920x1080px.jpg">
+                                    srcset="https://www.aesop.com/u1nb1km7t5q7/3RJlBS4abfW4VOu8lcqnxs/e093da2c53a0292a3c03f998cd424a10/Aesop_Campaign_Web_Homepage_Secondary_50-50_Desktop_1440x1500px.jpg">
                                 <source media="(min-width: 640px)"
-                                    srcset="https://www.aesop.com/u1nb1km7t5q7/6OcpWzTnTSZh2uiUnYjYDl/b9d2ef8478d92401f9f61b83fd2ef8ed/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1920x1080px.jpg">
+                                    srcset="https://www.aesop.com/u1nb1km7t5q7/dX2NNxQXEI4FxQa7xxPue/3205fad03bedba6f1e40f12de9147ce7/Aesop_Campaign_Web_Homepage_Secondary_50-50_Tablet_1536x950px.jpg">
                                 <source media="(min-width: 0px)"
-                                    srcset="https://www.aesop.com/u1nb1km7t5q7/3R2XQArQ0e4EFbltrNlmZZ/b9569e7494a8a35d9bdd2f307863c219/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1080x1080px.jpg">
-                                <img alt="Light bulbs surrounding a jar of Lucent Facial Refiner." loading="lazy"
-                                    src="https://www.aesop.com/u1nb1km7t5q7/6OcpWzTnTSZh2uiUnYjYDl/b9d2ef8478d92401f9f61b83fd2ef8ed/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1920x1080px.jpg">
+                                    srcset="https://www.aesop.com/u1nb1km7t5q7/3YtcHdQCflbQ6H1TsaxYv9/bcc34cd0a780ceb6b467a01d6ed8f71c/Aesop_Campaign_Web_Homepage_Secondary_50-50_Mobile_900x900px.jpg">
+                                <img alt="An Aesop room spray on the of the diffusing disc" loading="eager"
+                                    src="https://www.aesop.com/u1nb1km7t5q7/3RJlBS4abfW4VOu8lcqnxs/e093da2c53a0292a3c03f998cd424a10/Aesop_Campaign_Web_Homepage_Secondary_50-50_Desktop_1440x1500px.jpg">
                             </picture>
                         </figure>
+                    </div>
 
-                        <!-- 실제 영상 -->
-                        <video autoplay="" class="VideoPlayer_base___CVer" crossorigin="anonymous"
-                            data-testid="data-testid-VideoPlayer" loop="" playsinline=""
-                            src="https://videos.ctfassets.net/u1nb1km7t5q7/5XANdNCX5B4Hm6vBWt2uhr/6e735706bb0a965d44e38bf092735e4b/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1920x1080px.mp4">
-                            <source
-                                src="https://videos.ctfassets.net/u1nb1km7t5q7/5XANdNCX5B4Hm6vBWt2uhr/6e735706bb0a965d44e38bf092735e4b/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1920x1080px.mp4"
-                                type="video/mp4">
-                        </video>
+                    <div class="swiper-slide">
+                        <div class="txtWrap">
+                            <div class="contentBox">
+                                <div class="titleBox">
+                                    <h2 class="mainTitle">감각적인 실내 공간을 위한 홈 프래그런스​
+                                    </h2>
+                                </div>
 
-                        <!-- 영상이 로딩 중일 때 보여줄 버튼 (포스터 이미지 포함) -->
-                        <button
-                            class="Button_base__7AwOF Button_dark__Vllu2 Poster_base__j4HTR Transition_fadeEnter__FmNEN"
-                            type="button">
-                            <picture class="Image_base__sC3Gl Image_picture___KjWN">
+                                <div class="desBox">
+                                    <p>분위기 전환이 필요한 가정이나 사무실에 이상적인 이솝의 홈 레인지는 아로마틱 인센스, 룸 스프레이 등 다양한 방향 제품으로 구성되어
+                                        있습니다.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="linkBtn">
+                                <a href="#">
+                                    센티드 홈 보기
+                                    <i>
+                                        <svg aria-labelledby="rightArrow-:rk:" class="Icon_base__ruWRL Icon_dark__YP_ta"
+                                            data-testid="data-testid-Icon" focusable="false" height="12" role="img"
+                                            tabindex="-1" viewBox="0 0 50 50" width="12"
+                                            style="height: 12px; width: 12px;">
+                                            <title id="rightArrow-:rk:">rightArrow</title>
+                                            <g>
+                                                <path
+                                                    d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z">
+                                                </path>
+                                            </g>
+                                        </svg>
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <figure class="mediaWrap">
+                            <picture class="responsiveMedia">
+                                <source media="(min-width: 1920px)"
+                                    srcset="https://www.aesop.com/u1nb1km7t5q7/6PZe1xSj5TaAnCs3dkaokN/f73eeb7b125805061fef8c7d7c90b4e0/Aesop_Home_2023_Scented_Home_Web_Homepage_Primary_50-50_Desktop_XL_2560x1200px.jpg">
                                 <source media="(min-width: 1025px)"
-                                    srcset="https://www.aesop.com/u1nb1km7t5q7/6OcpWzTnTSZh2uiUnYjYDl/b9d2ef8478d92401f9f61b83fd2ef8ed/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1920x1080px.jpg">
+                                    srcset="https://www.aesop.com/u1nb1km7t5q7/3hoLsIfewhHA3Zwnxt1MF4/641a8bbf30afe663524ae0aa63dfe5e0/Aesop_Home_2023_Scented_Home_Web_Homepage_Primary_50-50_Desktop_1440x1500px.jpg">
                                 <source media="(min-width: 640px)"
-                                    srcset="https://www.aesop.com/u1nb1km7t5q7/6OcpWzTnTSZh2uiUnYjYDl/b9d2ef8478d92401f9f61b83fd2ef8ed/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1920x1080px.jpg">
+                                    srcset="https://www.aesop.com/u1nb1km7t5q7/7CNHNRrqvndstDa58953ug/29bb632bbcfd8b3a96da20449b27c09c/Aesop_Home_2023_Scented_Home_Web_Homepage_Primary_50-50_Tablet_1536x950px.jpg">
                                 <source media="(min-width: 0px)"
-                                    srcset="https://www.aesop.com/u1nb1km7t5q7/3R2XQArQ0e4EFbltrNlmZZ/b9569e7494a8a35d9bdd2f307863c219/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1080x1080px.jpg">
-                                <img alt="Light bulbs surrounding a jar of Lucent Facial Refiner." loading="lazy"
-                                    src="https://www.aesop.com/u1nb1km7t5q7/6OcpWzTnTSZh2uiUnYjYDl/b9d2ef8478d92401f9f61b83fd2ef8ed/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1920x1080px.jpg">
+                                    srcset="https://www.aesop.com/u1nb1km7t5q7/18n3b5339fJesx8glB24l0/188bfeeb8e33c3800dc2ac5516f952c7/Aesop_Home_2023_Scented_Home_Web_Homepage_Primary_50-50_Mobile_640x640px.jpg">
+                                <img alt="A lit Aromatique Candle sitting on a textured earth toned surface, alongside an amber bottle of Olous Aromatique Room Spray and Brass Oil Burner."
+                                    loading="eager"
+                                    src="https://www.aesop.com/u1nb1km7t5q7/3hoLsIfewhHA3Zwnxt1MF4/641a8bbf30afe663524ae0aa63dfe5e0/Aesop_Home_2023_Scented_Home_Web_Homepage_Primary_50-50_Desktop_1440x1500px.jpg">
                             </picture>
-                        </button>
+                        </figure>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="txtWrap">
+                            <div class="contentBox">
+                                <div class="titleBox">
+                                    <p class="subTitle">가장 빛나는 순간의 피부</p>
+                                    <h2 class="mainTitle">루센트 페이셜 리파이너</h2>
+                                </div>
+
+                                <div class="desBox">
+                                    <p>피부의 결과 톤을 고르게 가꿔주는 부드러운 각질 케어 마스크로, 독자적인 성분 조합이 피부를 정돈하고 영양을 공급합니다.</p>
+                                </div>
+                            </div>
+
+                            <div class="linkBtn">
+                                <a href="#">
+                                    루센트 페이셜 리파이너 보기
+                                    <i>
+                                        <svg aria-labelledby="rightArrow-:rk:" class="Icon_base__ruWRL Icon_dark__YP_ta"
+                                            data-testid="data-testid-Icon" focusable="false" height="12" role="img"
+                                            tabindex="-1" viewBox="0 0 50 50" width="12"
+                                            style="height: 12px; width: 12px;">
+                                            <title id="rightArrow-:rk:">rightArrow</title>
+                                            <g>
+                                                <path
+                                                    d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z">
+                                                </path>
+                                            </g>
+                                        </svg>
+                                    </i>
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <div class="mediaWrap" role="group">
+                            <!-- 비디오 로딩 전 이미지 -->
+                            <figure class="fallbackImg">
+                                <picture class="responsiveMedia">
+                                    <source media="(min-width: 1025px)"
+                                        srcset="https://www.aesop.com/u1nb1km7t5q7/6OcpWzTnTSZh2uiUnYjYDl/b9d2ef8478d92401f9f61b83fd2ef8ed/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1920x1080px.jpg">
+                                    <source media="(min-width: 640px)"
+                                        srcset="https://www.aesop.com/u1nb1km7t5q7/6OcpWzTnTSZh2uiUnYjYDl/b9d2ef8478d92401f9f61b83fd2ef8ed/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1920x1080px.jpg">
+                                    <source media="(min-width: 0px)"
+                                        srcset="https://www.aesop.com/u1nb1km7t5q7/3R2XQArQ0e4EFbltrNlmZZ/b9569e7494a8a35d9bdd2f307863c219/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1080x1080px.jpg">
+                                    <img alt="Light bulbs surrounding a jar of Lucent Facial Refiner." loading="lazy"
+                                        src="https://www.aesop.com/u1nb1km7t5q7/6OcpWzTnTSZh2uiUnYjYDl/b9d2ef8478d92401f9f61b83fd2ef8ed/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1920x1080px.jpg">
+                                </picture>
+                            </figure>
+
+                            <!-- 실제 영상 -->
+                            <video autoplay="" class="VideoPlayer_base___CVer" crossorigin="anonymous"
+                                data-testid="data-testid-VideoPlayer" loop="" playsinline=""
+                                src="https://videos.ctfassets.net/u1nb1km7t5q7/5XANdNCX5B4Hm6vBWt2uhr/6e735706bb0a965d44e38bf092735e4b/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1920x1080px.mp4">
+                                <source
+                                    src="https://videos.ctfassets.net/u1nb1km7t5q7/5XANdNCX5B4Hm6vBWt2uhr/6e735706bb0a965d44e38bf092735e4b/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1920x1080px.mp4"
+                                    type="video/mp4">
+                            </video>
+
+                            <!-- 영상이 로딩 중일 때 보여줄 버튼 (포스터 이미지 포함) -->
+                            <button
+                                class="Button_base__7AwOF Button_dark__Vllu2 Poster_base__j4HTR Transition_fadeEnter__FmNEN"
+                                type="button">
+                                <picture class="Image_base__sC3Gl Image_picture___KjWN">
+                                    <source media="(min-width: 1025px)"
+                                        srcset="https://www.aesop.com/u1nb1km7t5q7/6OcpWzTnTSZh2uiUnYjYDl/b9d2ef8478d92401f9f61b83fd2ef8ed/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1920x1080px.jpg">
+                                    <source media="(min-width: 640px)"
+                                        srcset="https://www.aesop.com/u1nb1km7t5q7/6OcpWzTnTSZh2uiUnYjYDl/b9d2ef8478d92401f9f61b83fd2ef8ed/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1920x1080px.jpg">
+                                    <source media="(min-width: 0px)"
+                                        srcset="https://www.aesop.com/u1nb1km7t5q7/3R2XQArQ0e4EFbltrNlmZZ/b9569e7494a8a35d9bdd2f307863c219/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1080x1080px.jpg">
+                                    <img alt="Light bulbs surrounding a jar of Lucent Facial Refiner." loading="lazy"
+                                        src="https://www.aesop.com/u1nb1km7t5q7/6OcpWzTnTSZh2uiUnYjYDl/b9d2ef8478d92401f9f61b83fd2ef8ed/Aesop_Lucent_Facial_Refiner_Web_Homepage_1_Primary_50-50_1920x1080px.jpg">
+                                </picture>
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </div>
+                <div class="swiper-button-next">
+                    <button class="nextBtn">
+                        <i>
+                            <svg aria-labelledby="chevron-:Rmofam:" class="Icon_base__ruWRL Icon_dark__YP_ta"
+                                data-testid="data-testid-Icon" focusable="false" height="14" role="img"
+                                style="height:14px;width:14px" tabindex="-1" viewBox="0 0 50 50" width="14">
+                                <title id="chevron-:Rmofam:">chevron</title>
+                                <g>
+                                    <polygon points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5"></polygon>
+                                </g>
+                            </svg>
+                        </i>
+                    </button>
 
-        <div class="viewerControl">
-            <button class="prevBtn">
-                <i>
-                    <svg aria-labelledby="chevron-:Riofam:" class="Icon_base__ruWRL Icon_dark__YP_ta"
-                        data-testid="data-testid-Icon" focusable="false" height="14" role="img"
-                        style="height:14px;width:14px" tabindex="-1" viewBox="0 0 50 50" width="14">
-                        <title id="chevron-:Riofam:">chevron</title>
-                        <g>
-                            <polygon points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5"></polygon>
-                        </g>
-                    </svg>
-                </i>
-            </button>
-            <span class="viewCount"><span class="currentView">1</span>/<span class="totalView">3</span></span>
-            <button class="nextBtn">
-                <i>
-                    <svg aria-labelledby="chevron-:Rmofam:" class="Icon_base__ruWRL Icon_dark__YP_ta"
-                        data-testid="data-testid-Icon" focusable="false" height="14" role="img"
-                        style="height:14px;width:14px" tabindex="-1" viewBox="0 0 50 50" width="14">
-                        <title id="chevron-:Rmofam:">chevron</title>
-                        <g>
-                            <polygon points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5"></polygon>
-                        </g>
-                    </svg>
-                </i>
-            </button>
-            <div class="pausePlayBtns">
-                <button class="pauseBtn">
-                    <i>
-                        <svg aria-labelledby="pauseSlim-:R58fam:" class="Icon_base__ruWRL Icon_dark__YP_ta"
+                </div>
+                <div class="swiper-button-prev">
+                    <button class="prevBtn">
+                        <i>
+                            <svg aria-labelledby="chevron-:Riofam:" class="Icon_base__ruWRL Icon_dark__YP_ta"
+                                data-testid="data-testid-Icon" focusable="false" height="14" role="img"
+                                style="height:14px;width:14px" tabindex="-1" viewBox="0 0 50 50" width="14">
+                                <title id="chevron-:Riofam:">chevron</title>
+                                <g>
+                                    <polygon points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5"></polygon>
+                                </g>
+                            </svg>
+                        </i>
+                    </button>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="pausePlayBtns">
+                    <button class="pauseBtn">
+                        <i>
+                            <svg aria-labelledby="pauseSlim-:R58fam:" class="Icon_base__ruWRL Icon_dark__YP_ta"
+                                data-testid="data-testid-Icon" focusable="false" height="14" role="img"
+                                style="height:14px;width:14px" tabindex="-1" viewBox="0 0 8 12" width="14">
+                                <title id="pauseSlim-:R58fam:">pauseSlim</title>
+                                <g>
+                                    <path
+                                        d="M1.2 0.75C0.813401 0.75 0.5 0.985051 0.5 1.275V10.725C0.5 11.0149 0.813401 11.25 1.2 11.25C1.5866 11.25 1.9 11.0149 1.9 10.725V1.275C1.9 0.985051 1.5866 0.75 1.2 0.75Z">
+                                    </path>
+                                    <path
+                                        d="M6.8001 0.75C6.4135 0.75 6.1001 0.985051 6.1001 1.275V10.725C6.1001 11.0149 6.4135 11.25 6.8001 11.25C7.1867 11.25 7.5001 11.0149 7.5001 10.725V1.275C7.5001 0.985051 7.1867 0.75 6.8001 0.75Z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </i>
+                    </button>
+                    <button class="playBtn">
+                        <svg aria-labelledby="play-:R58fam:" class="Icon_base__ruWRL Icon_dark__YP_ta"
                             data-testid="data-testid-Icon" focusable="false" height="14" role="img"
-                            style="height:14px;width:14px" tabindex="-1" viewBox="0 0 8 12" width="14">
-                            <title id="pauseSlim-:R58fam:">pauseSlim</title>
+                            style="height:14px;width:14px" tabindex="-1" viewBox="0 0 8 11" width="14">
+                            <title id="play-:R58fam:">play</title>
                             <g>
-                                <path
-                                    d="M1.2 0.75C0.813401 0.75 0.5 0.985051 0.5 1.275V10.725C0.5 11.0149 0.813401 11.25 1.2 11.25C1.5866 11.25 1.9 11.0149 1.9 10.725V1.275C1.9 0.985051 1.5866 0.75 1.2 0.75Z">
-                                </path>
-                                <path
-                                    d="M6.8001 0.75C6.4135 0.75 6.1001 0.985051 6.1001 1.275V10.725C6.1001 11.0149 6.4135 11.25 6.8001 11.25C7.1867 11.25 7.5001 11.0149 7.5001 10.725V1.275C7.5001 0.985051 7.1867 0.75 6.8001 0.75Z">
-                                </path>
+                                <polygon points="0,0 8,5.5 0,11"></polygon>
                             </g>
                         </svg>
-                    </i>
-                </button>
-                <button class="playBtn">
-                    <svg aria-labelledby="play-:R58fam:" class="Icon_base__ruWRL Icon_dark__YP_ta"
-                        data-testid="data-testid-Icon" focusable="false" height="14" role="img"
-                        style="height:14px;width:14px" tabindex="-1" viewBox="0 0 8 11" width="14">
-                        <title id="play-:R58fam:">play</title>
-                        <g>
-                            <polygon points="0,0 8,5.5 0,11"></polygon>
-                        </g>
-                    </svg>
-                </button>
+                    </button>
+                </div>
+
             </div>
+
+
         </div>
+
     </main>
 
     <section class="aesopContents">
@@ -436,7 +525,7 @@
                         <div class="desBox">
                             <p>가정을 위한 향기로운 제품으로 구성된 홈 레인지는 실용적일 뿐만 아니라 즐거움도 선사합니다.</p>
                         </div>
-                        <div class="linkBtn">
+                        <div class="linkBtn v1">
                             <a href="#">
                                 홈 전체보기
                                 <i>
@@ -458,19 +547,21 @@
                     <div class="swiper-slide">
                         <a href="#" class="wrapper">
                             <div class="imgArea">
-                                <picture class="responsiveMedia">
-                                    <source media="(min-width: 1920px)"
-                                        srcset="https://www.aesop.com/u1nb1km7t5q7/6O2jxWdrozd8n87IuRMiaa/722b07dfed966751102044c9ee1784ce/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_X-Large_3000x2930px.png">
-                                    <source media="(min-width: 1025px)"
-                                        srcset="https://www.aesop.com/u1nb1km7t5q7/45nP7H68DWHZydylzOSCIh/67a15e2da8f0ce3cdcc2277d5b8f6018/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png">
-                                    <source media="(min-width: 640px)"
-                                        srcset="https://www.aesop.com/u1nb1km7t5q7/3i4KA3Ww5TjxxhB1fsyatT/b8c62a93701d9d942e5e3f01513d6fe5/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Medium_800x781px.png">
-                                    <source media="(min-width: 0px)"
-                                        srcset="https://www.aesop.com/u1nb1km7t5q7/X04nsyGHzNn8D0rIv0afj/bbf13a72761fb1d6908b7a1f64b9fe53/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Small_700x684px.png">
-                                    <img alt="Tacit Eau de Parfum in amber glass bottle with outer carton "
-                                        loading="lazy"
-                                        src="https://www.aesop.com/u1nb1km7t5q7/45nP7H68DWHZydylzOSCIh/67a15e2da8f0ce3cdcc2277d5b8f6018/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png">
-                                </picture>
+                                <figure class="mediaWrap">
+                                    <picture class="responsiveMedia">
+                                        <source media="(min-width: 1920px)"
+                                            srcset="https://www.aesop.com/u1nb1km7t5q7/6O2jxWdrozd8n87IuRMiaa/722b07dfed966751102044c9ee1784ce/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_X-Large_3000x2930px.png">
+                                        <source media="(min-width: 1025px)"
+                                            srcset="https://www.aesop.com/u1nb1km7t5q7/45nP7H68DWHZydylzOSCIh/67a15e2da8f0ce3cdcc2277d5b8f6018/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png">
+                                        <source media="(min-width: 640px)"
+                                            srcset="https://www.aesop.com/u1nb1km7t5q7/3i4KA3Ww5TjxxhB1fsyatT/b8c62a93701d9d942e5e3f01513d6fe5/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Medium_800x781px.png">
+                                        <source media="(min-width: 0px)"
+                                            srcset="https://www.aesop.com/u1nb1km7t5q7/X04nsyGHzNn8D0rIv0afj/bbf13a72761fb1d6908b7a1f64b9fe53/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Small_700x684px.png">
+                                        <img alt="Tacit Eau de Parfum in amber glass bottle with outer carton "
+                                            loading="lazy"
+                                            src="https://www.aesop.com/u1nb1km7t5q7/45nP7H68DWHZydylzOSCIh/67a15e2da8f0ce3cdcc2277d5b8f6018/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png">
+                                    </picture>
+                                </figure>
                             </div>
                             <div class="infoArea">
                                 <h3 class="title">테싯 오 드 퍼퓸</h3>
@@ -482,19 +573,21 @@
                     <div class="swiper-slide">
                         <a href="#" class="wrapper">
                             <div class="imgArea">
-                                <picture class="responsiveMedia">
-                                    <source media="(min-width: 1920px)"
-                                        srcset="https://www.aesop.com/u1nb1km7t5q7/6O2jxWdrozd8n87IuRMiaa/722b07dfed966751102044c9ee1784ce/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_X-Large_3000x2930px.png">
-                                    <source media="(min-width: 1025px)"
-                                        srcset="https://www.aesop.com/u1nb1km7t5q7/45nP7H68DWHZydylzOSCIh/67a15e2da8f0ce3cdcc2277d5b8f6018/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png">
-                                    <source media="(min-width: 640px)"
-                                        srcset="https://www.aesop.com/u1nb1km7t5q7/3i4KA3Ww5TjxxhB1fsyatT/b8c62a93701d9d942e5e3f01513d6fe5/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Medium_800x781px.png">
-                                    <source media="(min-width: 0px)"
-                                        srcset="https://www.aesop.com/u1nb1km7t5q7/X04nsyGHzNn8D0rIv0afj/bbf13a72761fb1d6908b7a1f64b9fe53/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Small_700x684px.png">
-                                    <img alt="Tacit Eau de Parfum in amber glass bottle with outer carton "
-                                        loading="lazy"
-                                        src="https://www.aesop.com/u1nb1km7t5q7/45nP7H68DWHZydylzOSCIh/67a15e2da8f0ce3cdcc2277d5b8f6018/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png">
-                                </picture>
+                                <figure class="mediaWrap">
+                                    <picture class="responsiveMedia">
+                                        <source media="(min-width: 1920px)"
+                                            srcset="https://www.aesop.com/u1nb1km7t5q7/6O2jxWdrozd8n87IuRMiaa/722b07dfed966751102044c9ee1784ce/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_X-Large_3000x2930px.png">
+                                        <source media="(min-width: 1025px)"
+                                            srcset="https://www.aesop.com/u1nb1km7t5q7/45nP7H68DWHZydylzOSCIh/67a15e2da8f0ce3cdcc2277d5b8f6018/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png">
+                                        <source media="(min-width: 640px)"
+                                            srcset="https://www.aesop.com/u1nb1km7t5q7/3i4KA3Ww5TjxxhB1fsyatT/b8c62a93701d9d942e5e3f01513d6fe5/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Medium_800x781px.png">
+                                        <source media="(min-width: 0px)"
+                                            srcset="https://www.aesop.com/u1nb1km7t5q7/X04nsyGHzNn8D0rIv0afj/bbf13a72761fb1d6908b7a1f64b9fe53/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Small_700x684px.png">
+                                        <img alt="Tacit Eau de Parfum in amber glass bottle with outer carton "
+                                            loading="lazy"
+                                            src="https://www.aesop.com/u1nb1km7t5q7/45nP7H68DWHZydylzOSCIh/67a15e2da8f0ce3cdcc2277d5b8f6018/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png">
+                                    </picture>
+                                </figure>
                             </div>
                             <div class="infoArea">
                                 <h3 class="title">테싯 오 드 퍼퓸</h3>
@@ -506,19 +599,21 @@
                     <div class="swiper-slide">
                         <a href="#" class="wrapper">
                             <div class="imgArea">
-                                <picture class="responsiveMedia">
-                                    <source media="(min-width: 1920px)"
-                                        srcset="https://www.aesop.com/u1nb1km7t5q7/6O2jxWdrozd8n87IuRMiaa/722b07dfed966751102044c9ee1784ce/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_X-Large_3000x2930px.png">
-                                    <source media="(min-width: 1025px)"
-                                        srcset="https://www.aesop.com/u1nb1km7t5q7/45nP7H68DWHZydylzOSCIh/67a15e2da8f0ce3cdcc2277d5b8f6018/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png">
-                                    <source media="(min-width: 640px)"
-                                        srcset="https://www.aesop.com/u1nb1km7t5q7/3i4KA3Ww5TjxxhB1fsyatT/b8c62a93701d9d942e5e3f01513d6fe5/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Medium_800x781px.png">
-                                    <source media="(min-width: 0px)"
-                                        srcset="https://www.aesop.com/u1nb1km7t5q7/X04nsyGHzNn8D0rIv0afj/bbf13a72761fb1d6908b7a1f64b9fe53/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Small_700x684px.png">
-                                    <img alt="Tacit Eau de Parfum in amber glass bottle with outer carton "
-                                        loading="lazy"
-                                        src="https://www.aesop.com/u1nb1km7t5q7/45nP7H68DWHZydylzOSCIh/67a15e2da8f0ce3cdcc2277d5b8f6018/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png">
-                                </picture>
+                                <figure class="mediaWrap">
+                                    <picture class="responsiveMedia">
+                                        <source media="(min-width: 1920px)"
+                                            srcset="https://www.aesop.com/u1nb1km7t5q7/6O2jxWdrozd8n87IuRMiaa/722b07dfed966751102044c9ee1784ce/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_X-Large_3000x2930px.png">
+                                        <source media="(min-width: 1025px)"
+                                            srcset="https://www.aesop.com/u1nb1km7t5q7/45nP7H68DWHZydylzOSCIh/67a15e2da8f0ce3cdcc2277d5b8f6018/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png">
+                                        <source media="(min-width: 640px)"
+                                            srcset="https://www.aesop.com/u1nb1km7t5q7/3i4KA3Ww5TjxxhB1fsyatT/b8c62a93701d9d942e5e3f01513d6fe5/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Medium_800x781px.png">
+                                        <source media="(min-width: 0px)"
+                                            srcset="https://www.aesop.com/u1nb1km7t5q7/X04nsyGHzNn8D0rIv0afj/bbf13a72761fb1d6908b7a1f64b9fe53/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Small_700x684px.png">
+                                        <img alt="Tacit Eau de Parfum in amber glass bottle with outer carton "
+                                            loading="lazy"
+                                            src="https://www.aesop.com/u1nb1km7t5q7/45nP7H68DWHZydylzOSCIh/67a15e2da8f0ce3cdcc2277d5b8f6018/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png">
+                                    </picture>
+                                </figure>
                             </div>
                             <div class="infoArea">
                                 <h3 class="title">테싯 오 드 퍼퓸</h3>
@@ -530,19 +625,21 @@
                     <div class="swiper-slide">
                         <a href="#" class="wrapper">
                             <div class="imgArea">
-                                <picture class="responsiveMedia">
-                                    <source media="(min-width: 1920px)"
-                                        srcset="https://www.aesop.com/u1nb1km7t5q7/6O2jxWdrozd8n87IuRMiaa/722b07dfed966751102044c9ee1784ce/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_X-Large_3000x2930px.png">
-                                    <source media="(min-width: 1025px)"
-                                        srcset="https://www.aesop.com/u1nb1km7t5q7/45nP7H68DWHZydylzOSCIh/67a15e2da8f0ce3cdcc2277d5b8f6018/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png">
-                                    <source media="(min-width: 640px)"
-                                        srcset="https://www.aesop.com/u1nb1km7t5q7/3i4KA3Ww5TjxxhB1fsyatT/b8c62a93701d9d942e5e3f01513d6fe5/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Medium_800x781px.png">
-                                    <source media="(min-width: 0px)"
-                                        srcset="https://www.aesop.com/u1nb1km7t5q7/X04nsyGHzNn8D0rIv0afj/bbf13a72761fb1d6908b7a1f64b9fe53/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Small_700x684px.png">
-                                    <img alt="Tacit Eau de Parfum in amber glass bottle with outer carton "
-                                        loading="lazy"
-                                        src="https://www.aesop.com/u1nb1km7t5q7/45nP7H68DWHZydylzOSCIh/67a15e2da8f0ce3cdcc2277d5b8f6018/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png">
-                                </picture>
+                                <figure class="mediaWrap">
+                                    <picture class="responsiveMedia">
+                                        <source media="(min-width: 1920px)"
+                                            srcset="https://www.aesop.com/u1nb1km7t5q7/6O2jxWdrozd8n87IuRMiaa/722b07dfed966751102044c9ee1784ce/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_X-Large_3000x2930px.png">
+                                        <source media="(min-width: 1025px)"
+                                            srcset="https://www.aesop.com/u1nb1km7t5q7/45nP7H68DWHZydylzOSCIh/67a15e2da8f0ce3cdcc2277d5b8f6018/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png">
+                                        <source media="(min-width: 640px)"
+                                            srcset="https://www.aesop.com/u1nb1km7t5q7/3i4KA3Ww5TjxxhB1fsyatT/b8c62a93701d9d942e5e3f01513d6fe5/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Medium_800x781px.png">
+                                        <source media="(min-width: 0px)"
+                                            srcset="https://www.aesop.com/u1nb1km7t5q7/X04nsyGHzNn8D0rIv0afj/bbf13a72761fb1d6908b7a1f64b9fe53/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Small_700x684px.png">
+                                        <img alt="Tacit Eau de Parfum in amber glass bottle with outer carton "
+                                            loading="lazy"
+                                            src="https://www.aesop.com/u1nb1km7t5q7/45nP7H68DWHZydylzOSCIh/67a15e2da8f0ce3cdcc2277d5b8f6018/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png">
+                                    </picture>
+                                </figure>
                             </div>
                             <div class="infoArea">
                                 <h3 class="title">테싯 오 드 퍼퓸</h3>
@@ -554,19 +651,21 @@
                     <div class="swiper-slide">
                         <a href="#" class="wrapper">
                             <div class="imgArea">
-                                <picture class="responsiveMedia">
-                                    <source media="(min-width: 1920px)"
-                                        srcset="https://www.aesop.com/u1nb1km7t5q7/6O2jxWdrozd8n87IuRMiaa/722b07dfed966751102044c9ee1784ce/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_X-Large_3000x2930px.png">
-                                    <source media="(min-width: 1025px)"
-                                        srcset="https://www.aesop.com/u1nb1km7t5q7/45nP7H68DWHZydylzOSCIh/67a15e2da8f0ce3cdcc2277d5b8f6018/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png">
-                                    <source media="(min-width: 640px)"
-                                        srcset="https://www.aesop.com/u1nb1km7t5q7/3i4KA3Ww5TjxxhB1fsyatT/b8c62a93701d9d942e5e3f01513d6fe5/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Medium_800x781px.png">
-                                    <source media="(min-width: 0px)"
-                                        srcset="https://www.aesop.com/u1nb1km7t5q7/X04nsyGHzNn8D0rIv0afj/bbf13a72761fb1d6908b7a1f64b9fe53/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Small_700x684px.png">
-                                    <img alt="Tacit Eau de Parfum in amber glass bottle with outer carton "
-                                        loading="lazy"
-                                        src="https://www.aesop.com/u1nb1km7t5q7/45nP7H68DWHZydylzOSCIh/67a15e2da8f0ce3cdcc2277d5b8f6018/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png">
-                                </picture>
+                                <figure class="mediaWrap">
+                                    <picture class="responsiveMedia">
+                                        <source media="(min-width: 1920px)"
+                                            srcset="https://www.aesop.com/u1nb1km7t5q7/6O2jxWdrozd8n87IuRMiaa/722b07dfed966751102044c9ee1784ce/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_X-Large_3000x2930px.png">
+                                        <source media="(min-width: 1025px)"
+                                            srcset="https://www.aesop.com/u1nb1km7t5q7/45nP7H68DWHZydylzOSCIh/67a15e2da8f0ce3cdcc2277d5b8f6018/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png">
+                                        <source media="(min-width: 640px)"
+                                            srcset="https://www.aesop.com/u1nb1km7t5q7/3i4KA3Ww5TjxxhB1fsyatT/b8c62a93701d9d942e5e3f01513d6fe5/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Medium_800x781px.png">
+                                        <source media="(min-width: 0px)"
+                                            srcset="https://www.aesop.com/u1nb1km7t5q7/X04nsyGHzNn8D0rIv0afj/bbf13a72761fb1d6908b7a1f64b9fe53/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Small_700x684px.png">
+                                        <img alt="Tacit Eau de Parfum in amber glass bottle with outer carton "
+                                            loading="lazy"
+                                            src="https://www.aesop.com/u1nb1km7t5q7/45nP7H68DWHZydylzOSCIh/67a15e2da8f0ce3cdcc2277d5b8f6018/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png">
+                                    </picture>
+                                </figure>
                             </div>
                             <div class="infoArea">
                                 <h3 class="title">테싯 오 드 퍼퓸</h3>
@@ -578,19 +677,21 @@
                     <div class="swiper-slide">
                         <a href="#" class="wrapper">
                             <div class="imgArea">
-                                <picture class="responsiveMedia">
-                                    <source media="(min-width: 1920px)"
-                                        srcset="https://www.aesop.com/u1nb1km7t5q7/6O2jxWdrozd8n87IuRMiaa/722b07dfed966751102044c9ee1784ce/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_X-Large_3000x2930px.png">
-                                    <source media="(min-width: 1025px)"
-                                        srcset="https://www.aesop.com/u1nb1km7t5q7/45nP7H68DWHZydylzOSCIh/67a15e2da8f0ce3cdcc2277d5b8f6018/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png">
-                                    <source media="(min-width: 640px)"
-                                        srcset="https://www.aesop.com/u1nb1km7t5q7/3i4KA3Ww5TjxxhB1fsyatT/b8c62a93701d9d942e5e3f01513d6fe5/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Medium_800x781px.png">
-                                    <source media="(min-width: 0px)"
-                                        srcset="https://www.aesop.com/u1nb1km7t5q7/X04nsyGHzNn8D0rIv0afj/bbf13a72761fb1d6908b7a1f64b9fe53/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Small_700x684px.png">
-                                    <img alt="Tacit Eau de Parfum in amber glass bottle with outer carton "
-                                        loading="lazy"
-                                        src="https://www.aesop.com/u1nb1km7t5q7/45nP7H68DWHZydylzOSCIh/67a15e2da8f0ce3cdcc2277d5b8f6018/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png">
-                                </picture>
+                                <figure class="mediaWrap">
+                                    <picture class="responsiveMedia">
+                                        <source media="(min-width: 1920px)"
+                                            srcset="https://www.aesop.com/u1nb1km7t5q7/6O2jxWdrozd8n87IuRMiaa/722b07dfed966751102044c9ee1784ce/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_X-Large_3000x2930px.png">
+                                        <source media="(min-width: 1025px)"
+                                            srcset="https://www.aesop.com/u1nb1km7t5q7/45nP7H68DWHZydylzOSCIh/67a15e2da8f0ce3cdcc2277d5b8f6018/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png">
+                                        <source media="(min-width: 640px)"
+                                            srcset="https://www.aesop.com/u1nb1km7t5q7/3i4KA3Ww5TjxxhB1fsyatT/b8c62a93701d9d942e5e3f01513d6fe5/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Medium_800x781px.png">
+                                        <source media="(min-width: 0px)"
+                                            srcset="https://www.aesop.com/u1nb1km7t5q7/X04nsyGHzNn8D0rIv0afj/bbf13a72761fb1d6908b7a1f64b9fe53/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Small_700x684px.png">
+                                        <img alt="Tacit Eau de Parfum in amber glass bottle with outer carton "
+                                            loading="lazy"
+                                            src="https://www.aesop.com/u1nb1km7t5q7/45nP7H68DWHZydylzOSCIh/67a15e2da8f0ce3cdcc2277d5b8f6018/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png">
+                                    </picture>
+                                </figure>
                             </div>
                             <div class="infoArea">
                                 <h3 class="title">테싯 오 드 퍼퓸</h3>
@@ -598,23 +699,25 @@
                             </div>
                         </a>
                     </div>
-                    
+
                     <div class="swiper-slide">
                         <a href="#" class="wrapper">
                             <div class="imgArea">
-                                <picture class="responsiveMedia">
-                                    <source media="(min-width: 1920px)"
-                                        srcset="https://www.aesop.com/u1nb1km7t5q7/6O2jxWdrozd8n87IuRMiaa/722b07dfed966751102044c9ee1784ce/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_X-Large_3000x2930px.png">
-                                    <source media="(min-width: 1025px)"
-                                        srcset="https://www.aesop.com/u1nb1km7t5q7/45nP7H68DWHZydylzOSCIh/67a15e2da8f0ce3cdcc2277d5b8f6018/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png">
-                                    <source media="(min-width: 640px)"
-                                        srcset="https://www.aesop.com/u1nb1km7t5q7/3i4KA3Ww5TjxxhB1fsyatT/b8c62a93701d9d942e5e3f01513d6fe5/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Medium_800x781px.png">
-                                    <source media="(min-width: 0px)"
-                                        srcset="https://www.aesop.com/u1nb1km7t5q7/X04nsyGHzNn8D0rIv0afj/bbf13a72761fb1d6908b7a1f64b9fe53/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Small_700x684px.png">
-                                    <img alt="Tacit Eau de Parfum in amber glass bottle with outer carton "
-                                        loading="lazy"
-                                        src="https://www.aesop.com/u1nb1km7t5q7/45nP7H68DWHZydylzOSCIh/67a15e2da8f0ce3cdcc2277d5b8f6018/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png">
-                                </picture>
+                                <figure class="mediaWrap">
+                                    <picture class="responsiveMedia">
+                                        <source media="(min-width: 1920px)"
+                                            srcset="https://www.aesop.com/u1nb1km7t5q7/6O2jxWdrozd8n87IuRMiaa/722b07dfed966751102044c9ee1784ce/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_X-Large_3000x2930px.png">
+                                        <source media="(min-width: 1025px)"
+                                            srcset="https://www.aesop.com/u1nb1km7t5q7/45nP7H68DWHZydylzOSCIh/67a15e2da8f0ce3cdcc2277d5b8f6018/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png">
+                                        <source media="(min-width: 640px)"
+                                            srcset="https://www.aesop.com/u1nb1km7t5q7/3i4KA3Ww5TjxxhB1fsyatT/b8c62a93701d9d942e5e3f01513d6fe5/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Medium_800x781px.png">
+                                        <source media="(min-width: 0px)"
+                                            srcset="https://www.aesop.com/u1nb1km7t5q7/X04nsyGHzNn8D0rIv0afj/bbf13a72761fb1d6908b7a1f64b9fe53/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Small_700x684px.png">
+                                        <img alt="Tacit Eau de Parfum in amber glass bottle with outer carton "
+                                            loading="lazy"
+                                            src="https://www.aesop.com/u1nb1km7t5q7/45nP7H68DWHZydylzOSCIh/67a15e2da8f0ce3cdcc2277d5b8f6018/Aesop_Fragrance_Tacit_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png">
+                                    </picture>
+                                </figure>
                             </div>
                             <div class="infoArea">
                                 <h3 class="title">테싯 오 드 퍼퓸</h3>
@@ -623,17 +726,258 @@
                         </a>
                     </div>
                 </div>
+
+                <div class="swiper-pagination"></div>
             </div>
         </article>
-        <article class="perfumeDetail"></article>
-        <article class="storeLocation"></article>
-        <article class="slogan"></article>
+
+        <article class="perfumeDetail">
+            <div class="imgArea">
+                <figure class="mediaWrap">
+                    <picture class="responsiveMedia">
+                        <source media="(min-width: 1025px)"
+                            srcset="https://www.aesop.com/u1nb1km7t5q7/hCrph3LBwLoizFOsQ7Mat/a322adc09e81c72660928e5c2fb4870c/Aesop_Fragrance_2024_Web_Homepage_Secondary_2_100mL_Mid_Desktop_2560x1440px.jpg">
+                        <source media="(min-width: 640px)"
+                            srcset="https://www.aesop.com/u1nb1km7t5q7/6Qalou1g5gqhSQPBrZRr46/6401f0ae9f29dcf67b8d49113e88678e/Aesop_Fragrance_2024_Web_Homepage_Secondary_2_100mL_Mid_Tablet_1400x788px.jpg">
+                        <source media="(min-width: 0px)"
+                            srcset="https://www.aesop.com/u1nb1km7t5q7/4CbqjZxziCNAogAV38HrvZ/867392ba0f25e0c0feb8b119359b1d99/Aesop_Fragrance_2024_Web_Homepage_Secondary_2_100mL_Mid_Mobile_900x900px.jpg">
+                        <img alt="Three 100mL amber glass bottles on the shelf of a wooden cabinet." loading="lazy"
+                            src="https://www.aesop.com/u1nb1km7t5q7/hCrph3LBwLoizFOsQ7Mat/a322adc09e81c72660928e5c2fb4870c/Aesop_Fragrance_2024_Web_Homepage_Secondary_2_100mL_Mid_Desktop_2560x1440px.jpg">
+                    </picture>
+                </figure>
+            </div>
+
+            <div class="txtWrap">
+                <div class="titleBox">
+                    <p class="subTitle">온라인 단독</p>
+                    <h2 class="mainTitle">친숙한 아로마, 더 커진 후각적 감각</h2>
+
+                </div>
+                <div class="desBox">
+                    <p>이솝의 독특한 오 드 퍼퓸 중 테싯, 휠, 마라케시 인텐스를 더 큰 100mL 용량으로 공식 온라인 몰에서 단독으로 만나보세요.</p>
+                </div>
+                <div class="linkBtn v2">
+                    <a href="#">
+                        지금보기
+                        <i>
+                            <svg aria-labelledby="rightArrow-:rk:" class="Icon_base__ruWRL Icon_dark__YP_ta"
+                                data-testid="data-testid-Icon" focusable="false" height="12" role="img" tabindex="-1"
+                                viewBox="0 0 50 50" width="12" style="height: 12px; width: 12px;">
+                                <title id="rightArrow-:rk:">rightArrow</title>
+                                <g>
+                                    <path d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </i>
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <article class="storeLocation">
+            <div class="txtWrap">
+                <div class="titleBox">
+                    <h2 class="mainTitle">스토어 로케이터</h2>
+
+                </div>
+                <div class="desBox">
+                    <p>매장에서는 이솝 컨설턴트가 고객 여러분을 따뜻하게 맞이하고 기프트 구매를 위한 맞춤형 컨설팅을 제공해드립니다.</p>
+                </div>
+                <div class="linkBtn v2">
+                    <a href="#">
+                        가까운 스토어 찾기
+                        <i>
+                            <svg aria-labelledby="rightArrow-:rk:" class="Icon_base__ruWRL Icon_dark__YP_ta"
+                                data-testid="data-testid-Icon" focusable="false" height="12" role="img" tabindex="-1"
+                                viewBox="0 0 50 50" width="12" style="height: 12px; width: 12px;">
+                                <title id="rightArrow-:rk:">rightArrow</title>
+                                <g>
+                                    <path d="M30.1,5.3L50,25.1L30.1,45h-6.6l18-17.6H0v-4.8h41.5l-18-17.6h6.6V5.3z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="imgArea swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                </div>
+
+                <div class="swiper-button-next">
+                    <button class="nextBtn">
+                        <i>
+                            <svg aria-labelledby="chevron-:Rmofam:" class="Icon_base__ruWRL Icon_dark__YP_ta"
+                                data-testid="data-testid-Icon" focusable="false" height="14" role="img"
+                                style="height:14px;width:14px" tabindex="-1" viewBox="0 0 50 50" width="14">
+                                <title id="chevron-:Rmofam:">chevron</title>
+                                <g>
+                                    <polygon points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5"></polygon>
+                                </g>
+                            </svg>
+                        </i>
+                    </button>
+
+                </div>
+                <div class="swiper-button-prev">
+                    <button class="prevBtn">
+                        <i>
+                            <svg aria-labelledby="chevron-:Riofam:" class="Icon_base__ruWRL Icon_dark__YP_ta"
+                                data-testid="data-testid-Icon" focusable="false" height="14" role="img"
+                                style="height:14px;width:14px" tabindex="-1" viewBox="0 0 50 50" width="14">
+                                <title id="chevron-:Riofam:">chevron</title>
+                                <g>
+                                    <polygon points="25,31.3 4.2,10.5 0.1,14.6 25,39.5 50,14.6 45.9,10.5"></polygon>
+                                </g>
+                            </svg>
+                        </i>
+                    </button>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </article>
+        <article class="slogan">
+            <div class="sloganWrap">
+                <h2 class="title">‘Beauty is not in the face; beauty is a light in the heart.’</h2>
+                <p class="des">Kahlil Gibran</p>
+            </div>
+        </article>
     </section>
 
-    <footer></footer>
+    <footer>
+        <div class="footerTop">
+            <div class="aesopCommunication">
+                <div class="titleArea">
+                    <h4>이솝 커뮤니케이션</h4>
+                </div>
 
+                <div class="contentArea">
+
+                </div>
+            </div>
+
+            <div class="orderSupport">
+                <div class="titleArea">
+                    <h4>주문 및 지원</h4>
+                </div>
+
+                <div class="contentArea links">
+                    <ul>
+                        <li><a href="#">문의하기</a></li>
+                        <li><a href="#">자주 묻는 질문</a></li>
+                        <li><a href="#">배송</a></li>
+                        <li><a href="#">반품</a></li>
+                        <li><a href="#">배송 조회하기</a></li>
+                        <li><a href="#">주문 내역</a></li>
+                        <li><a href="#">이용 약관</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service">
+                <div class="titleArea">
+                    <h4>서비스</h4>
+                </div>
+
+                <div class="contentArea links">
+                    <ul>
+                        <li><a href="#">기업체 구매</a></li>
+                        <li><a href="#">1:1 채팅 상담</a></li>
+                        <li><a href="#">린스 앤 리턴 캠페인</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="locationSetting">
+                <div class="titleArea">
+                    <h4>위치 기본 설정</h4>
+                </div>
+
+                <div class="contentArea links">
+                    <ul>
+                        <li>배송:<a href="#"><strong>대한민국</strong></a></li>
+                        <li>언어:<a href="#"><strong>한국어</strong></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sustainability">
+                <div class="titleArea">
+                    <h4>지속가능성</h4>
+                </div>
+
+                <div class="contentArea">
+                    <ul>
+                        <li>이솝은 비콥 인증을 획득한 브랜드이며, PETA로부터 비건 인증을 받은 브랜드입니다.<a href="#"><strong>더
+                                    알아보기</strong></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="aboutAesop">
+                <div class="titleArea">
+                    <h4>소개</h4>
+                </div>
+
+                <div class="contentArea links">
+                    <ul>
+                        <li><a href="#">브랜드 스토리</a></li>
+                        <li><a href="#">이솝 재단</a></li>
+                        <li><a href="#">채용</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">영상정보처리기기운영/관리 방침</a></li>
+                        <li><a href="#">정품 인증</a></li>
+                        <li><a href="#">쿠키 정책</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="socialLinks">
+                <div class="titleArea">
+                    <h4>소셜</h4>
+                </div>
+
+                <div class="contentArea links">
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Kakao Plus Friend</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="companyInfo">
+                <div class="titleArea">
+                    <h4>기업 정보</h4>
+                </div>
+
+                <div class="contentArea links">
+                    <ul>
+                        <li><a href="#">상호: 이솝코리아 유한회사 | 주소: 서울특별시 강남구 도산대로45길 10-6 이솝코리아 | 대표자: ANTOINE PIERRE
+                                BOURGEOIS(앙트안삐에르부르주아) | 대표전화: 1800-1987 | 대표 이메일: aesop@aesop.com | 호스팅 사업자: SAP Hybris
+                                | 사업자 등록 번호: 220-88-56014 <strong>사업자정보확인</strong> | 통신판매업 신고번호: 2014-서울강남-02300</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footerBottom">
+            <p>© Aesop</p>
+        </div>
+    </footer>
+
+    <!-- js -->
     <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- index.js -->
+    <script src="js/index.js"></script>
 
 </body>
 

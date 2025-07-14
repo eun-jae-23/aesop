@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+/* ========================================
+   반응형 폰트 시스템
+   ======================================== */
+
+/* 기본 폰트 크기 설정 */
+html {
+    font-size: 16px; /* 모바일 기본 */
+}
+
+/* 태블릿 */
+@media (min-width: 640px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+/* PC */
+@media (min-width: 1025px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+/* ========================================
+   폰트 크기 유틸리티 클래스
+   ======================================== */
+
+/* 제목 계열 */
+.text-xl { font-size: 2rem; }      /* 32px → 36px → 40px */
+.text-lg { font-size: 1.5rem; }    /* 24px → 27px → 30px */
+.text-md { font-size: 1.25rem; }   /* 20px → 22.5px → 25px */
+
+/* 본문 계열 */
+.text-base { font-size: 1rem; }    /* 16px → 18px → 20px */
+.text-sm { font-size: 0.875rem; }  /* 14px → 15.75px → 17.5px */
+.text-xs { font-size: 0.75rem; }   /* 12px → 13.5px → 15px */
+
+/* ========================================
+   사용 예시
+   ======================================== */
+
+/* 
+.mainTitle {
+    font-size: 2rem;        // rem 사용
+}
+
+.subTitle {
+    font-size: 1.25rem;     // rem 사용
+}
+
+.bodyText {
+    font-size: 1rem;        // rem 사용
+}
+
+.smallText {
+    font-size: 0.875rem;    // rem 사용
+}
+*/
