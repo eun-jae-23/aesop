@@ -8,7 +8,8 @@
     clear: both;
 }
 
-/* font 기본 설정 */
+/* ********************************************************* */
+/* font 기본 설정 : 반응형 구간별로 작성 */
 body {
     /* 기본색 - 333 */
     color: #333;
@@ -16,8 +17,10 @@ body {
     /* 기본 폰트(Suisse) 및 weight */
     font-family: Suisse, sans-serif;
     font-weight: 400;
+    font-size: 1rem; /* 1rem = 16px */
 
 }
+/* ********************************************************* */
 
 
 
@@ -32,7 +35,7 @@ body {
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{
     border: 0;
     outline: 0;
-    font-size: 100%;
+    font-size: 1rem;
     vertical-align: baseline;
     background: transparent;
 }
@@ -50,7 +53,7 @@ a {
     font-family: Suisse, sans-serif;
     font-weight: 400;
 
-    font-size: 100%; /* reset시에는 폰트 사이즈는 100%! */
+    font-size: 1rem;
     vertical-align: baseline;
     background: transparent;
     text-decoration: none;

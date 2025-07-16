@@ -4,4 +4,26 @@
    헤더 모바일 기본 스타일 (~639px)
    ======================================== */
 
-/* 헤더 모바일 기본 스타일 작성 */
+/* 여기에 모바일 기본 스타일 작성 */
+    
+    header {}
+    header .alertbanner {
+        box-sizing: border-box;
+        padding: 10px 20px;
+        background-color: #a6672b;
+    }
+    header .alertbanner p{}
+
+    header .shippingbanner {}
+    
+    header .navWrapper {}
+    header .navWrapper .pcNav {
+        display: none;
+    }
+    header .navWrapper .tabNav {
+        display: none;
+    }
+    
+    header .navWrapper .mobileNav {}
+        
+
