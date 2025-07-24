@@ -1,4 +1,41 @@
 @charset "utf-8";
+/* 전역 box-sizing 설정 */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 기존 설정 유지 */
+html, body {
+    overflow-x: hidden;
+}
+
+/* rem 단위 계산을 위한 기준점 설정 */
+html {
+    font-size: 16px; /* 기본 기준점 */
+    -webkit-text-size-adjust: 100%; /* iOS Safari 자동 확대 방지 */
+    -ms-text-size-adjust: 100%; /* IE 자동 확대 방지 */
+    text-size-adjust: 100%; /* 표준 속성 */
+}
+
+:root {
+    --basic-color-white: #fff;
+    --basic-color-white2: #fffef2;
+    --basic-color-txt: #333;
+    --light-color-txt: #666;
+    --basic-color-label: #945c26;
+    --basic-color-background: #f6f5e8;
+    
+    /* 폰트 사이즈 변수 - rem 단위로 통일 */
+    --font-size-xs: 0.75rem;      /* 12px */
+    --font-size-sm: 0.875rem;     /* 14px */
+    --font-size-base: 1rem;       /* 16px */
+    --font-size-lg: 1.125rem;     /* 18px */
+    --font-size-xl: 1.25rem;      /* 20px */
+    --font-size-2xl: 1.5rem;      /* 24px */
+    --font-size-3xl: 1.875rem;    /* 30px */
+    --font-size-4xl: 2.25rem;     /* 36px */
+    --font-size-5xl: 3rem;        /* 48px */
+}
 
 
 /* float 해제 */
@@ -9,7 +46,7 @@
 }
 
 /* ********************************************************* */
-/* font 기본 설정 : 반응형 구간별로 작성 */
+/* font 기본 설정  */
 body {
     /* 기본색 - 333 */
     color: #333;
@@ -17,7 +54,7 @@ body {
     /* 기본 폰트(Suisse) 및 weight */
     font-family: Suisse, sans-serif;
     font-weight: 400;
-    font-size: 1rem; /* 1rem = 16px */
+    font-size: var(--font-size-sm);     /* 14px */
 
 }
 /* ********************************************************* */
@@ -35,12 +72,18 @@ body {
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{
     border: 0;
     outline: 0;
-    font-size: 1rem;
     vertical-align: baseline;
     background: transparent;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu,nav,section {
+h1, h2, h3, h4, h5, p {
+    overflow-wrap: break-word;
+    font-family: Suisse, sans-serif;
+    font-weight: 400;
+    font-size: var(--font-size-sm);     /* 14px */
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu,nav,section, i {
     display: block;
 }
 
@@ -53,7 +96,7 @@ a {
     font-family: Suisse, sans-serif;
     font-weight: 400;
 
-    font-size: 1rem;
+    font-size: var(--font-size-sm);
     vertical-align: baseline;
     background: transparent;
     text-decoration: none;
@@ -136,5 +179,6 @@ fieldset {
 legend {
     display: none;
 }
+
 
 

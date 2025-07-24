@@ -4,57 +4,477 @@
    반응형 전용 스타일
    ======================================== */
 
-/* ********************************************************* */   
-/* header 반응형 모음 */   
+/* ********************************************************* */
 
 /* ========================================
    태블릿 스타일 (640px~1024px)
+   - 태블릿 모음 : header, index, footer
    ======================================== */
+
+
 @media (min-width: 640px) {
-    /* 태블릿 전용 스타일 작성 */
+    /* header 시작 *****************************************/
+
+    header .navWrapper .tabNav {
+        display: flex;
+        /* 자식 : .primary, .secondary */
+        box-sizing: border-box;
+        padding: 0 34px;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        background-color: var(--basic-color-white2);
+    }
+
+    header .navWrapper .tabNav .primary {}
+
+    header .navWrapper .tabNav .primary ul {
+        display: flex;
+    }
+
+    header .navWrapper .tabNav .primary ul li {
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    header .navWrapper .tabNav .primary ul li button {}
+
+    header .navWrapper .tabNav .primary ul li button a {
+        color: var(--basic-color-txt);
+    }
+
+    header .navWrapper .tabNav .primary ul li button a i {
+        width: 18px;
+        height: 18px;
+    }
+
+    header .navWrapper .tabNav .primary ul li button a i svg {
+        width: 100%;
+        height: 100%;
+        fill: var(--basic-color-txt);
+    }
+
+
+    header .navWrapper .tabNav .secondary {}
+
+    header .navWrapper .tabNav .secondary ul {
+        display: flex;
+    }
+
+    header .navWrapper .tabNav .secondary ul li {
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    header .navWrapper .tabNav .secondary ul li button {}
+
+    header .navWrapper .tabNav .secondary ul li button a {
+        color: var(--basic-color-txt);
+    }
+
+
+
+
+
+    /* ///////////////////////////// */
+
+    /* 기존 .mobileNav 숨김 처리 */
+    header .navWrapper .mobileNav {
+        display: none;
+    }
+
+    /* ///////////////////////////// */
+
+    /* header 끝 ***************************************************************** */
+
+
+
+    /* index 시작 ***************************************************** */
+
+    main {
+        margin-top: 0;
+
+    }
+
+    main .container {}
+
+    /* main .container .logoArea ******************************** */
+    main .container .logoArea {}
+
+    main .container .swiper {}
+
+    main .container .swiper .swiper-wrapper {}
+
+    main .container .swiper .swiper-wrapper .swiper-slide {}
+
+    /* .swiper-slide .txtWrap ***************************************************** */
+    main .container .swiper .swiper-wrapper .swiper-slide .txtWrap {}
+
+    main .container .swiper .swiper-wrapper .swiper-slide .txtWrap .contentBox {}
+
+    main .container .swiper .swiper-wrapper .swiper-slide .txtWrap .contentBox .titleBox {}
+
+    main .container .swiper .swiper-wrapper .swiper-slide .txtWrap .contentBox .titleBox .subTitle {}
+
+    main .container .swiper .swiper-wrapper .swiper-slide .txtWrap .contentBox .titleBox .mainTitle {}
+
+    main .container .swiper .swiper-wrapper .swiper-slide .txtWrap .contentBox .desBox {}
+
+    main .container .swiper .swiper-wrapper .swiper-slide .txtWrap .contentBox .desBox p {}
+
+    main .container .swiper .swiper-wrapper .swiper-slide .txtWrap .linkBtn {}
+
+    main .container .swiper .swiper-wrapper .swiper-slide .txtWrap .linkBtn a {}
+
+    main .container .swiper .swiper-wrapper .swiper-slide .txtWrap .linkBtn a i {}
+
+    main .container .swiper .swiper-wrapper .swiper-slide .txtWrap .linkBtn a i svg {}
+
+
+    /* .swiper-slide .mediaWrap ***************************************************** */
+    main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap {
+        aspect-ratio: 16 / 9;
+        /* 16:9 비율로 변경 */
+    }
+
+    /* ==============동영상 로딩 상태별 표시 스타일 시작======================= */
+
+    /* 동영상도 16:9 비율에 맞춤 */
+    main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap video {
+        aspect-ratio: 16 / 9;
+    }
+
+    /* fallback 이미지도 16:9 비율에 맞춤 */
+    main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap .fallbackImg .responsiveMedia img {
+        aspect-ratio: 16 / 9;
+    }
+
+
+    /* ==============동영상 로딩 상태별 표시 스타일 끝====================== */
+
+
+
+
+
+
+
+    /* index 끝 ***************************************************** */
+
+
+
+
+
+
+
+    /* footer 시작 ***************************************************** */
+
+
+
+
+    /* footer 끝 ***************************************************** */
+
+}
+
+/* ========================================
+   PC 스타일 (1025px~)
+   - pc 모음 : header, index, footer
+   ======================================== */
+@media (min-width: 1025px) {
+    /* PC 전용 스타일 작성 */
+
+
+    /* header 시작 ***************************************************** */
+
+    header .alertBanner {
+        display: flex;
+        justify-content: center;
+    }
+
+    header .shippingBanner .bannerBtn {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    header .shippingBanner .bannerBtn p.bannerTxt {
+        flex-grow: 0;
+    }
+
+    header .navWrapper .pcNav {
+        display: flex;
+        /* 자식 : .primary, .secondary */
+        box-sizing: border-box;
+        padding: 0 40px;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        background-color: var(--basic-color-white2);
+    }
+
+    header .navWrapper .pcNav .primary {}
+
+    header .navWrapper .pcNav .primary ul {
+        display: flex;
+    }
+
+    header .navWrapper .pcNav .primary ul li {
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    header .navWrapper .pcNav .primary ul li button {}
+
+    header .navWrapper .pcNav .primary ul li button a {
+        color: var(--basic-color-txt);
+        padding: 4px;
+        font-size: calc(12px + .02vw);
+    }
+
+    header .navWrapper .pcNav .primary ul li button a i {
+        width: 18px;
+        height: 18px;
+    }
+
+    header .navWrapper .pcNav .primary ul li button a i svg {
+        width: 100%;
+        height: 100%;
+        fill: var(--basic-color-txt);
+    }
+
+
+    header .navWrapper .pcNav .secondary {}
+
+    header .navWrapper .pcNav .secondary ul {
+        display: flex;
+    }
+
+    header .navWrapper .pcNav .secondary ul li {
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    header .navWrapper .pcNav .secondary ul li button {}
+
+    header .navWrapper .pcNav .secondary ul li button a {
+        color: var(--basic-color-txt);
+        font-size: calc(12px + .02vw);
+    }
+
+
+
+
+    header .navWrapper .tabNav {
+        display: none;
+    }
+
+
+    /* header 특정 너비 영역 스타일 시작 **************************************************/
+
+    /* 1220px~1420px */
+    @media (min-width: 1220px) {
+
+        header .navWrapper .pcNav .primary ul li button a {
+            font-size: calc(12px + .02vw);
+        }
+
+
+        header .navWrapper .pcNav .secondary ul li button a {
+            font-size: calc(12px + .02vw);
+        }
+
+
+    }
+
+    /* 1421px~ */
+    @media (min-width: 1421px) {
+
+        header .navWrapper .pcNav .primary ul li button a {
+            font-size: var(--font-size-sm);
+        }
+
+        header .navWrapper .pcNav .secondary ul li button a {
+            font-size: var(--font-size-sm);
+        }
+    }
+
+    /* header 특정 너비 영역 스타일 끝 **************************************************/
+
+
+
+    /* header 끝 ***************************************************** */
+
+
+
+    /* index 시작 ***************************************************** */
+
+    main .container {
+        position: relative;
+        /* .logoArea 기준 */
+    }
+
+    /* main .container .logoArea ******************************** */
+    main .container .logoArea {
+        display: block;
+        position: absolute;
+        /* 기준 : .container */
+        top: 110px;
+        left: 40px;
+        z-index: 11;
+    }
+
+    main .container .logoArea h1.logo {}
+
+    main .container .logoArea h1.logo a {}
+
+    main .container .logoArea h1.logo a i {
+        height: 40px;
+        width: 120px;
+    }
+
+    main .container .logoArea h1.logo a i svg {
+        width: 100%;
+        height: 100%;
+        fill: var(--basic-color-txt);
+    }
+
+    /* main .container .swiper ******************************** */
+    main .container .swiper {}
+
+    main .container .swiper .swiper-wrapper {
+        background-color: var(--basic-color-background);
+    }
+
+    main .container .swiper .swiper-wrapper .swiper-slide {}
+
+    /* .swiper-slide .txtWrap ***************************************************** */
+    main .container .swiper .swiper-wrapper .swiper-slide .txtWrap {
+        order: 0;
+        flex-basis: 50%;
+        box-sizing: border-box;
+        padding-top: 110px;
+        padding-bottom: 250px;
+
+
+        width: calc(33.3333333333% - 80px);
+        flex-basis: auto;
+        margin-right: auto;
+        margin-left: 16.6666666667%;
+
+    }
+
+    main .container .swiper .swiper-wrapper .swiper-slide .txtWrap .contentBox {}
+
+    main .container .swiper .swiper-wrapper .swiper-slide .txtWrap .contentBox .titleBox {}
+
+    main .container .swiper .swiper-wrapper .swiper-slide .txtWrap .contentBox .titleBox .subTitle {}
+
+    main .container .swiper .swiper-wrapper .swiper-slide .txtWrap .contentBox .titleBox .mainTitle {
+        font-size: var(--font-size-3xl);
+    }
+
+    main .container .swiper .swiper-wrapper .swiper-slide .txtWrap .contentBox .desBox {}
+
+    main .container .swiper .swiper-wrapper .swiper-slide .txtWrap .contentBox .desBox p {}
+
+    main .container .swiper .swiper-wrapper .swiper-slide .txtWrap .linkBtn {}
+
+    main .container .swiper .swiper-wrapper .swiper-slide .txtWrap .linkBtn a {}
+
+    main .container .swiper .swiper-wrapper .swiper-slide .txtWrap .linkBtn a i {}
+
+    main .container .swiper .swiper-wrapper .swiper-slide .txtWrap .linkBtn a i svg {}
+
+    /* .swiper-slide .mediaWrap ******************************** */
+    main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap {
+        order: 1;
+        flex-basis: 50%;
+        aspect-ratio: unset;
+        overflow: hidden;
+    }
+
+    main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap .responsiveMedia {
+        display: block;
+        height: 100%;
+    }
+
+    main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap .responsiveMedia img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* ==============동영상 로딩 상태별 표시 스타일 시작======================= */
+
+    /* 동영상도 .responsiveMedia img 설정과 똑같이 하기 */
+    main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap video {
+        aspect-ratio: unset;
+
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* fallback 이미지도 16:9 비율에 맞춤 */
+    main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap .fallbackImg .responsiveMedia img {
+        aspect-ratio: unset;
+
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+
+    /* ==============동영상 로딩 상태별 표시 스타일 끝====================== */
+
+
+    /* main .container .swiper .swiperControlWrap ******************************** */
+    main .container .swiper .swiperControlWrap {
+        position: relative;
+        margin-top: 10px;
+    }
+
+    /* 자식 4 : .pausePlayBtns  */
+    main .container .swiper .swiperControlWrap .swiperControl .pausePlayBtns {
+        /* PC 버전에서는 position과 transform 초기화 */
+        position: static;
+        right: auto;
+        top: auto;
+        transform: none;
+        /* 이 요소는 클릭 가능 */
+        order: 3;
+    }
+
+    main .container .swiper .swiperControlWrap .swiperControl .pausePlayBtns .pauseBtn {
+        margin: 0;
+    }
+    main .container .swiper .swiperControlWrap .swiperControl .pausePlayBtns .playBtn {
+        margin: 0;
+    }
     
 
-}
-
-/* ========================================
-   PC 스타일 (1025px~)
-   ======================================== */
-@media (min-width: 1025px) {
-    /* PC 전용 스타일 작성 */
-}
 
 
-/* ********************************************************* */   
-/* index 반응형 모음 */
-/* ========================================
-   태블릿 스타일 (640px~1024px)
-   ======================================== */
-   @media (min-width: 640px) {
-    /* 태블릿 전용 스타일 작성 */
 
-}
 
-/* ========================================
-   PC 스타일 (1025px~)
-   ======================================== */
-@media (min-width: 1025px) {
-    /* PC 전용 스타일 작성 */
-}
 
-/* ********************************************************* */   
-/* footer 반응형 모음 */
-/* ========================================
-   태블릿 스타일 (640px~1024px)
-   ======================================== */
-   @media (min-width: 640px) {
-    /* 태블릿 전용 스타일 작성 */
+
+
+
+
+
+    /* index 끝 ***************************************************** */
+
+
+
+    /* footer 시작 ***************************************************** */
+
+    /* footer 끝 ***************************************************** */
+
+
+
 
 }
-
-/* ========================================
-   PC 스타일 (1025px~)
-   ======================================== */
-@media (min-width: 1025px) {
-    /* PC 전용 스타일 작성 */
-}
-

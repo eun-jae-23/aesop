@@ -5,25 +5,180 @@
    ======================================== */
 
 /* 여기에 모바일 기본 스타일 작성 */
-    
-    header {}
-    header .alertbanner {
-        box-sizing: border-box;
-        padding: 10px 20px;
-        background-color: #a6672b;
-    }
-    header .alertbanner p{}
 
-    header .shippingbanner {}
-    
-    header .navWrapper {}
-    header .navWrapper .pcNav {
-        display: none;
-    }
-    header .navWrapper .tabNav {
-        display: none;
-    }
-    
-    header .navWrapper .mobileNav {}
-        
+header {
+    position: relative;
+    z-index: 9999;
+}
+
+/* header .alertBanner */
+header .alertBanner {
+    box-sizing: border-box;
+    padding: 10px 20px;
+    background-color: #c2c2af;
+}
+
+header .alertBanner p {
+    font-size: var(--font-size-small);
+    line-height: 1.5;
+
+}
+
+/* header .shippingBanner */
+header .shippingBanner {
+    box-sizing: border-box;
+    padding: 12px 20px 8px;
+    background-color: #252525;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header .shippingBanner .bannerBtn {
+    width: 100%;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid transparent;
+}
+
+header .shippingBanner .bannerBtn p.bannerTxt {
+    text-align: left;
+    flex-grow: 2;
+    font-size: var(--font-size-small);
+    line-height: 1.5;
+    color: var(--basic-color-white2);
+}
+
+header .shippingBanner .bannerBtn i {}
+
+header .shippingBanner .bannerBtn i svg {
+    fill: var(--basic-color-white2);
+    margin-left: 20px;
+    stroke: var(--basic-color-white2);
+    stroke-width: .4px;
+
+    width: 22px;
+    height: 22px;
+}
+
+/* header .navWrapper */
+header .navWrapper {
+    height: 80px;
+}
+
+header .navWrapper .pcNav {
+    display: none;
+}
+
+header .navWrapper .tabNav {
+    display: none;
+}
+
+header .navWrapper .mobileNav {}
+
+header .navWrapper .mobileNav nav {}
+
+header .navWrapper .mobileNav nav ul {
+    height: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* .mobileNav 내부 모든 요소 색상 변경(흰색) */
+header .navWrapper .mobileNav nav ul li, header .navWrapper .mobileNav nav ul li a {
+    color: var(--basic-color-white);
+    fill: var(--basic-color-white);
+}
+
+
+/* li.logoArea */
+header .navWrapper .mobileNav nav ul li.logoArea {
+    flex-grow: 1;
+
+    align-items: center;
+}
+
+header .navWrapper .mobileNav nav ul li.logoArea h1.logo {}
+
+header .navWrapper .mobileNav nav ul li.logoArea h1.logo a {}
+
+header .navWrapper .mobileNav nav ul li.logoArea h1.logo a i {}
+
+header .navWrapper .mobileNav nav ul li.logoArea h1.logo a i svg {
+    height: 22px !important;
+    width: 70px !important;
+}
+
+
+/* li.btnArea 공통 */
+header .navWrapper .mobileNav nav ul li.btnArea {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 12px;
+}
+
+header .navWrapper .mobileNav nav ul li.btnArea button {}
+
+header .navWrapper .mobileNav nav ul li.btnArea button a {}
+
+header .navWrapper .mobileNav nav ul li.btnArea button a i {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+}
+header .navWrapper .mobileNav nav ul li.btnArea button a i svg {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+/* li.btnArea의 개별요소 li.cart */
+header .navWrapper .mobileNav nav ul li.cart {}
+header .navWrapper .mobileNav nav ul li.cart button.cartBtn {}
+header .navWrapper .mobileNav nav ul li.cart button.cartBtn a {
+    line-height: 26px;
+    font-size: var(--font-size-small);
+}
+
+/* li.btnArea의 개별요소 li.allMenu */
+header .navWrapper .mobileNav nav ul li.allMenu {
+    margin-right: 0;
+}
+header .navWrapper .mobileNav nav ul li.allMenu button.allMenuBtn {
+}
+header .navWrapper .mobileNav nav ul li.allMenu button.allMenuBtn a {
+    width: 16px;
+    height: 16px;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+header .navWrapper .mobileNav nav ul li.allMenu button.allMenuBtn a::before {
+    display: block;
+    width: 16px;
+    height: 2px;
+    content: "";
+    transition: all .2s;
+    background-color: var(--basic-color-white);
+
+    flex-basis: 100%;
+}
+header .navWrapper .mobileNav nav ul li.allMenu button.allMenuBtn a::after {
+    display: block;
+    width: 16px;
+    height: 2px;
+    content: "";
+    transition: all .2s;
+    background-color: var(--basic-color-white);
+
+    flex-basis: 100%;
+}
 

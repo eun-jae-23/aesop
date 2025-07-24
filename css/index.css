@@ -1,7 +1,553 @@
 @charset "utf-8";
+/* index.css */
 
 /* ========================================
    index 모바일 기본 스타일 (~639px)
    ======================================== */
 
 /* 여기에 모바일 기본 스타일 작성 */
+
+/* main ******************************** */
+main {
+   margin-top: -80px;
+   /* 모바일 네비게이션 높이만큼 마이너스 */
+}
+
+main .container {}
+
+/* main .container .logoArea ******************************** */
+main .container .logoArea {
+   display: none;
+}
+
+/* main .container .swiper ******************************** */
+main .container .swiper {
+   width: 100%;
+   position: relative;
+   /* .swiperControlWrap의 기준 */
+}
+
+/* main .container .swiper .swiper-wrapper ******************************** */
+main .container .swiper .swiper-wrapper {}
+
+main .container .swiper .swiper-wrapper .swiper-slide {
+   width: 100%;
+   display: flex;
+   /* flex부모 (자식: .txtWrap, .mediaWrap) */
+   flex-wrap: wrap;
+}
+
+/* .swiper-slide .txtWrap ******************************** */
+main .container .swiper .swiper-wrapper .swiper-slide .txtWrap {
+   order: 1;
+   flex-basis: 100%;
+   /* flex자식 (부모: .swiper-slide) */
+
+   box-sizing: border-box;
+   padding: 40px 20px;
+   padding-top: 70px;
+   background-color: var(--basic-color-background);
+}
+
+main .container .swiper .swiper-wrapper .swiper-slide .txtWrap .contentBox {
+   margin-bottom: 30px;
+}
+
+.swiper-slide .txtWrap .contentBox .titleBox {
+   display: flex;
+   flex-direction: column;
+   /* 주축 : y축 (위->아래) */
+   margin-bottom: 15px;
+}
+
+.swiper-slide .txtWrap .contentBox .titleBox .subTitle {
+   margin-bottom: 20px;
+   font-weight: 700;
+}
+
+.swiper-slide .txtWrap .contentBox .titleBox .mainTitle {
+   margin-bottom: 5px;
+   font-size: var(--font-size-2xl);
+   /* 24px */
+}
+
+.swiper-slide .txtWrap .contentBox .desBox {}
+
+.swiper-slide .txtWrap .contentBox .desBox p {
+   margin-bottom: 30px;
+   font-size: var(--font-size-base);
+   /* 16px */
+}
+
+
+main .container .swiper .swiper-wrapper .swiper-slide .txtWrap .linkBtn {}
+
+main .container .swiper .swiper-wrapper .swiper-slide .txtWrap .linkBtn a {
+   border: 1px solid rgba(51, 51, 51, .2);
+   height: 60px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   color: var(--basic-color-txt);
+   font-weight: 700;
+   box-sizing: border-box;
+   padding: 19px 23px;
+}
+
+main .container .swiper .swiper-wrapper .swiper-slide .txtWrap .linkBtn a i {
+   width: 12px;
+   height: 12px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+main .container .swiper .swiper-wrapper .swiper-slide .txtWrap .linkBtn a i svg {
+   fill: var(--basic-color-txt);
+}
+
+
+/* .swiper-slide .mediaWrap ******************************** */
+main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap {
+   flex-basis: 100%;
+   /* flex자식 (부모: .swiper-slide) */
+   order: 0;
+   aspect-ratio: 1 / 1;
+   overflow: hidden;
+   /* 추가: 동영상 컨테이너 역할 강화 */
+   position: relative;
+   display: block;
+}
+
+main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap .responsiveMedia {
+   width: 100%;
+   height: auto;
+}
+
+main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap .responsiveMedia img {
+   width: 100%;
+   height: auto;
+   object-fit: cover;
+}
+
+/* ==============동영상 로딩 상태별 표시 스타일 시작======================= */
+
+/* 1. 동영상 기본 스타일 - 로딩 완료 시 표시 */
+main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap video {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   z-index: 3;
+   opacity: 0;
+   transition: opacity 0.3s ease;
+   
+   /* 크기 제한 수정 */
+   max-width: 100%;
+   max-height: 100%;
+   box-sizing: border-box;
+   /* aspect-ratio 제거하고 부모 크기에 맞춤 */
+   object-position: center;
+   /* 부모의 overflow hidden을 고려한 설정 */
+   transform: scale(1);
+   transform-origin: center center;
+}
+
+/* 2. fallback 이미지 - 로딩 전 표시 */
+main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap .fallbackImg {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 1;
+}
+
+main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap .fallbackImg .responsiveMedia {
+   width: 100%;
+   height: 100%;
+}
+
+main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap .fallbackImg .responsiveMedia img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+/* 3. 로딩 버튼 - 로딩 중 표시 */
+main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap button[class*="Poster_base"] {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 2;
+   background: rgba(0, 0, 0, 0.5);
+   border: none;
+   border-radius: 50%;
+   width: 60px;
+   height: 60px;
+   cursor: pointer;
+   display: none;
+   align-items: center;
+   justify-content: center;
+}
+
+main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap button[class*="Poster_base"] .Image_base__sC3Gl {
+   width: 100%;
+   height: 100%;
+}
+
+main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap button[class*="Poster_base"] .Image_base__sC3Gl img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 50%;
+}
+
+/* 4. 로딩 상태별 표시 제어 */
+
+/* 초기 상태: fallback 이미지만 표시 */
+main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap .fallbackImg {
+   display: block;
+}
+
+main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap video {
+   display: none;
+}
+
+main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap button[class*="Poster_base"] {
+   display: none;
+}
+
+/* 로딩 중 상태: 버튼만 표시 */
+main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap.loading .fallbackImg {
+   display: none;
+}
+
+main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap.loading button[class*="Poster_base"] {
+   display: flex;
+}
+
+main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap.loading video {
+   display: none;
+}
+
+/* 로딩 완료 상태: 동영상만 표시 */
+main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap.loaded .fallbackImg {
+   display: none;
+}
+
+main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap.loaded button[class*="Poster_base"] {
+   display: none;
+}
+
+main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap.loaded video {
+   display: block;
+   opacity: 1;
+}
+
+/* ==============동영상 로딩 상태별 표시 스타일 끝====================== */
+
+
+/* main .container .swiper .swiperControlWrap ******************************** */
+/* 
+   .swiperControl 
+   - 자식 :
+     1.swiper-button-next
+     2.swiper-button-prev
+     3.swiper-pagination
+     4.pausePlayBtns (flex item)
+   */
+main .container .swiper .swiperControlWrap {
+   /* .swiperControlWrap : 레이아웃 잡는 역할 */
+   width: 100%;
+
+   position: absolute;
+   /* 기준 부모: .swiper */
+   left: 50%;
+   transform: translateX(-50%);
+   /* top: calc(100vw + 10px); 제거 - 제이쿼리로 동적 계산 */
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 10;
+   /* 다른 요소들 위에 표시 */
+}
+
+main .container .swiper .swiperControlWrap .swiperControl {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   pointer-events: none;
+   /* 이 div는 클릭 이벤트를 차단하지 않음 */
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+   /* .swiper-button-next, swiper-button-prev 버튼 기본 스타일 초기화 및 가상요소 display none처리 */
+   display: none;
+}
+
+/* 자식 1 : .swiper-button-next */
+main .container .swiper .swiperControlWrap .swiperControl .swiper-button-next {
+   /* /////////다음버튼 초기화//////// */
+   position: static;
+   top: auto;
+   right: auto;
+   left: auto;
+   bottom: auto;
+   transform: none;
+   background: none;
+   border: none;
+   padding: 0;
+   margin: 0;
+   box-shadow: none;
+   outline: none;
+   -webkit-appearance: none;
+   appearance: none;
+   /* ////////////////////////////// */
+
+   order: 2;
+   /* flex item, 부모 : .swiperControlWrap */
+   width: 28px;
+   height: 28px;
+   margin: 0 8px;
+   cursor: pointer;
+   pointer-events: auto;
+}
+
+main .container .swiper .swiperControlWrap .swiperControl .swiper-button-next .nextBtn {}
+
+main .container .swiper .swiperControlWrap .swiperControl .swiper-button-next .nextBtn i {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+main .container .swiper .swiperControlWrap .swiperControl .swiper-button-next .nextBtn i svg {
+   width: 14px;
+   height: 14px;
+   transform: rotate(-90deg);
+   transform-origin: center center;
+   fill: var(--light-color-txt);
+}
+
+
+/* 자식 2 : .swiper-button-prev */
+main .container .swiper .swiperControlWrap .swiperControl .swiper-button-prev {
+   /* /////////이전버튼 초기화//////// */
+   position: static;
+   top: auto;
+   right: auto;
+   left: auto;
+   bottom: auto;
+   transform: none;
+   background: none;
+   border: none;
+   padding: 0;
+   margin: 0;
+   box-shadow: none;
+   outline: none;
+   -webkit-appearance: none;
+   appearance: none;
+   /* ////////////////////////////// */
+
+   order: 0;
+   /* flex item, 부모 : .swiperControlWrap */
+   width: 28px;
+   height: 28px;
+   margin: 0 8px;
+   cursor: pointer;
+   pointer-events: auto;
+}
+
+main .container .swiper .swiperControlWrap .swiperControl .swiper-button-prev .prevBtn {}
+
+main .container .swiper .swiperControlWrap .swiperControl .swiper-button-prev .prevBtn i {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+main .container .swiper .swiperControlWrap .swiperControl .swiper-button-prev .prevBtn i svg {
+   transform: rotate(90deg);
+   transform-origin: center center;
+   fill: var(--light-color-txt);
+   width: 14px;
+   height: 14px;
+}
+
+
+/* 자식 3 : .swiper-pagination */
+main .container .swiper .swiperControlWrap .swiperControl .swiper-pagination {
+   /* /////////페이지네이션 초기화//////// */
+   position: static;
+   top: auto;
+   right: auto;
+   left: auto;
+   bottom: auto;
+   transform: none;
+   background: none;
+   border: none;
+   padding: 0;
+   margin: 0;
+   box-shadow: none;
+   outline: none;
+   -webkit-appearance: none;
+   appearance: none;
+   /* ////////////////////////////// */
+
+   order: 1;
+   /* flex item, 부모 : .swiperControlWrap */
+   pointer-events: auto;
+   /* 이 요소는 클릭 가능 */
+}
+
+/* fraction 페이지네이션 스타일 */
+main .container .swiper .swiperControlWrap .swiperControl .swiper-pagination.swiper-pagination-fraction {
+   /* /////////fraction 페이지네이션 초기화//////// */
+   position: static;
+   top: auto;
+   right: auto;
+   left: auto;
+   bottom: auto;
+   transform: none;
+   background: none;
+   border: none;
+   padding: 0;
+   margin: 0;
+   box-shadow: none;
+   outline: none;
+   -webkit-appearance: none;
+   appearance: none;
+   color: inherit;
+   font-size: inherit;
+   font-weight: inherit;
+   letter-spacing: inherit;
+   /* ////////////////////////////// */
+
+   color: var(--light-color-txt);
+   min-width: 30px;
+   text-align: center;
+   line-height: normal;
+   box-sizing: border-box;
+   font-size: var(--font-size-small);
+}
+
+.swiper-pagination.swiper-pagination-fraction.swiper-pagination-horizontal {
+   width: 30px;
+}
+
+
+/* 기존 페이지네이션 점 사용안함 : display none */
+main .container .swiper .swiperControlWrap .swiperControl .swiper-pagination .swiper-pagination-bullet {
+   display: none;
+}
+
+main .container .swiper .swiperControlWrap .swiperControl .swiper-pagination .swiper-pagination-bullet-active {
+   display: none;
+}
+
+
+
+
+/* 자식 4 : .pausePlayBtns  */
+main .container .swiper .swiperControlWrap .swiperControl .pausePlayBtns {
+   position: absolute;
+   right: 10px;
+   top: 50%;
+   transform: translateY(-50%);
+   pointer-events: auto;
+   /* 이 요소는 클릭 가능 */
+}
+
+main .container .swiper .swiperControlWrap .swiperControl .pausePlayBtns .pauseBtn {
+   cursor: pointer;
+   width: 28px;
+   height: 28px;
+   margin: 0 8px;
+}
+
+main .container .swiper .swiperControlWrap .swiperControl .pausePlayBtns .pauseBtn i {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+main .container .swiper .swiperControlWrap .swiperControl .pausePlayBtns .pauseBtn i svg {
+   fill: var(--light-color-txt);
+   width: 14px;
+   height: 14px;
+}
+
+main .container .swiper .swiperControlWrap .swiperControl .pausePlayBtns .playBtn {
+   cursor: pointer;
+   width: 28px;
+   height: 28px;
+   margin: 0 8px;
+}
+
+main .container .swiper .swiperControlWrap .swiperControl .pausePlayBtns .playBtn i {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+main .container .swiperControlWrap .swiperControl .pausePlayBtns .playBtn i svg {
+   fill: var(--light-color-txt);
+   width: 14px;
+   height: 14px;
+}
+
+
+
+
+
+
+
+
+
+/* section.aesopContents ******************************** */
+
+section.aesopContents {
+   /* 임시 숨김 처리 */
+   display: none;
+}
+
+
+
+footer {
+   /* 임시 숨김 처리 */
+   display: none;
+}
+
+/* 동영상 반응형 크기 조정 */
+@media (max-width: 639px) {
+   main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap video {
+      width: 100vw;
+      height: 100vw;
+      max-width: 100%;
+      max-height: 100%;
+   }
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+   main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap video {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+   }
+}
+
+@media (min-width: 1025px) {
+   main .container .swiper .swiper-wrapper .swiper-slide .mediaWrap video {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+   }
+}
